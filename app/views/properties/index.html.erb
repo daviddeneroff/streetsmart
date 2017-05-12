@@ -1,0 +1,115 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Properties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Borough</th>
+      <th>Block</th>
+      <th>Lot</th>
+      <th>Market</th>
+      <th>Submarket</th>
+      <th>Building status</th>
+      <th>Address</th>
+      <th>Zip code</th>
+      <th>Bldg class</th>
+      <th>Property type</th>
+      <th>Secondary property type</th>
+      <th>Zoning</th>
+      <th>Land use</th>
+      <th>Number of buildings</th>
+      <th>Building sf</th>
+      <th>Commercial sf</th>
+      <th>Residential sf</th>
+      <th>Office sf</th>
+      <th>Retail sf</th>
+      <th>Garage sf</th>
+      <th>Storage sf</th>
+      <th>Factory sf</th>
+      <th>Other sf</th>
+      <th>Number of floors</th>
+      <th>Total units</th>
+      <th>Residential units</th>
+      <th>Commercial units</th>
+      <th>Lot front</th>
+      <th>Lot depth</th>
+      <th>Lot area</th>
+      <th>Lot type</th>
+      <th>Building frontage</th>
+      <th>Building depth</th>
+      <th>Built far</th>
+      <th>Resi far</th>
+      <th>Commercial far</th>
+      <th>Facility far</th>
+      <th>Year built</th>
+      <th>Ownername</th>
+      <th>Zonedist1</th>
+      <th>Xcoord</th>
+      <th>Ycoord</th>
+      <th>Has retail</th>
+      <th>Number of retail premises</th>
+      <th>Retail total space</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @properties.each do |property| %>
+      <tr>
+        <td><%= property.borough %></td>
+        <td><%= property.block %></td>
+        <td><%= property.lot %></td>
+        <td><%= property.market %></td>
+        <td><%= property.submarket %></td>
+        <td><%= property.building_status %></td>
+        <td><%= property.address %></td>
+        <td><%= property.zip_code %></td>
+        <td><%= property.bldg_class %></td>
+        <td><%= property.property_type %></td>
+        <td><%= property.secondary_property_type %></td>
+        <td><%= property.zoning %></td>
+        <td><%= property.land_use %></td>
+        <td><%= property.number_of_buildings %></td>
+        <td><%= property.building_sf %></td>
+        <td><%= property.commercial_sf %></td>
+        <td><%= property.residential_sf %></td>
+        <td><%= property.office_sf %></td>
+        <td><%= property.retail_sf %></td>
+        <td><%= property.garage_sf %></td>
+        <td><%= property.storage_sf %></td>
+        <td><%= property.factory_sf %></td>
+        <td><%= property.other_sf %></td>
+        <td><%= property.number_of_floors %></td>
+        <td><%= property.total_units %></td>
+        <td><%= property.residential_units %></td>
+        <td><%= property.commercial_units %></td>
+        <td><%= property.lot_front %></td>
+        <td><%= property.lot_depth %></td>
+        <td><%= property.lot_area %></td>
+        <td><%= property.lot_type %></td>
+        <td><%= property.building_frontage %></td>
+        <td><%= property.building_depth %></td>
+        <td><%= property.built_far %></td>
+        <td><%= property.resi_far %></td>
+        <td><%= property.commercial_far %></td>
+        <td><%= property.facility_far %></td>
+        <td><%= property.year_built %></td>
+        <td><%= property.ownername %></td>
+        <td><%= property.zonedist1 %></td>
+        <td><%= property.xcoord %></td>
+        <td><%= property.ycoord %></td>
+        <td><%= property.has_retail %></td>
+        <td><%= property.number_of_retail_premises %></td>
+        <td><%= property.retail_total_space %></td>
+        <td><%= link_to 'Show', property %></td>
+        <td><%= link_to 'Edit', edit_property_path(property) %></td>
+        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Property', new_property_path %>

@@ -1,0 +1,242 @@
+<%= form_with(model: property, local: true) do |form| %>
+  <% if property.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(property.errors.count, "error") %> prohibited this property from being saved:</h2>
+
+      <ul>
+      <% property.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :borough %>
+    <%= form.number_field :borough, id: :property_borough %>
+  </div>
+
+  <div class="field">
+    <%= form.label :block %>
+    <%= form.number_field :block, id: :property_block %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lot %>
+    <%= form.number_field :lot, id: :property_lot %>
+  </div>
+
+  <div class="field">
+    <%= form.label :market %>
+    <%= form.text_field :market, id: :property_market %>
+  </div>
+
+  <div class="field">
+    <%= form.label :submarket %>
+    <%= form.text_field :submarket, id: :property_submarket %>
+  </div>
+
+  <div class="field">
+    <%= form.label :building_status %>
+    <%= form.text_field :building_status, id: :property_building_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :property_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zip_code %>
+    <%= form.text_field :zip_code, id: :property_zip_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bldg_class %>
+    <%= form.text_field :bldg_class, id: :property_bldg_class %>
+  </div>
+
+  <div class="field">
+    <%= form.label :property_type %>
+    <%= form.text_field :property_type, id: :property_property_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :secondary_property_type %>
+    <%= form.text_field :secondary_property_type, id: :property_secondary_property_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zoning %>
+    <%= form.text_field :zoning, id: :property_zoning %>
+  </div>
+
+  <div class="field">
+    <%= form.label :land_use %>
+    <%= form.number_field :land_use, id: :property_land_use %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_buildings %>
+    <%= form.number_field :number_of_buildings, id: :property_number_of_buildings %>
+  </div>
+
+  <div class="field">
+    <%= form.label :building_sf %>
+    <%= form.number_field :building_sf, id: :property_building_sf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :commercial_sf %>
+    <%= form.number_field :commercial_sf, id: :property_commercial_sf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :residential_sf %>
+    <%= form.number_field :residential_sf, id: :property_residential_sf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :office_sf %>
+    <%= form.number_field :office_sf, id: :property_office_sf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :retail_sf %>
+    <%= form.number_field :retail_sf, id: :property_retail_sf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :garage_sf %>
+    <%= form.number_field :garage_sf, id: :property_garage_sf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :storage_sf %>
+    <%= form.number_field :storage_sf, id: :property_storage_sf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :factory_sf %>
+    <%= form.number_field :factory_sf, id: :property_factory_sf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :other_sf %>
+    <%= form.number_field :other_sf, id: :property_other_sf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_floors %>
+    <%= form.number_field :number_of_floors, id: :property_number_of_floors %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_units %>
+    <%= form.number_field :total_units, id: :property_total_units %>
+  </div>
+
+  <div class="field">
+    <%= form.label :residential_units %>
+    <%= form.number_field :residential_units, id: :property_residential_units %>
+  </div>
+
+  <div class="field">
+    <%= form.label :commercial_units %>
+    <%= form.number_field :commercial_units, id: :property_commercial_units %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lot_front %>
+    <%= form.text_field :lot_front, id: :property_lot_front %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lot_depth %>
+    <%= form.text_field :lot_depth, id: :property_lot_depth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lot_area %>
+    <%= form.text_field :lot_area, id: :property_lot_area %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lot_type %>
+    <%= form.text_field :lot_type, id: :property_lot_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :building_frontage %>
+    <%= form.number_field :building_frontage, id: :property_building_frontage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :building_depth %>
+    <%= form.number_field :building_depth, id: :property_building_depth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :built_far %>
+    <%= form.number_field :built_far, id: :property_built_far %>
+  </div>
+
+  <div class="field">
+    <%= form.label :resi_far %>
+    <%= form.number_field :resi_far, id: :property_resi_far %>
+  </div>
+
+  <div class="field">
+    <%= form.label :commercial_far %>
+    <%= form.number_field :commercial_far, id: :property_commercial_far %>
+  </div>
+
+  <div class="field">
+    <%= form.label :facility_far %>
+    <%= form.number_field :facility_far, id: :property_facility_far %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year_built %>
+    <%= form.number_field :year_built, id: :property_year_built %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ownername %>
+    <%= form.text_field :ownername, id: :property_ownername %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zonedist1 %>
+    <%= form.text_field :zonedist1, id: :property_zonedist1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :xcoord %>
+    <%= form.text_field :xcoord, id: :property_xcoord %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ycoord %>
+    <%= form.text_field :ycoord, id: :property_ycoord %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_retail %>
+    <%= form.check_box :has_retail, id: :property_has_retail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_retail_premises %>
+    <%= form.number_field :number_of_retail_premises, id: :property_number_of_retail_premises %>
+  </div>
+
+  <div class="field">
+    <%= form.label :retail_total_space %>
+    <%= form.number_field :retail_total_space, id: :property_retail_total_space %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

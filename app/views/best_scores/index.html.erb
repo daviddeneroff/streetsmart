@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Best Scores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Game</th>
+      <th>Score</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @best_scores.each do |best_score| %>
+      <tr>
+        <td><%= best_score.game %></td>
+        <td><%= best_score.score %></td>
+        <td><%= link_to 'Show', best_score %></td>
+        <td><%= link_to 'Edit', edit_best_score_path(best_score) %></td>
+        <td><%= link_to 'Destroy', best_score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Best Score', new_best_score_path %>

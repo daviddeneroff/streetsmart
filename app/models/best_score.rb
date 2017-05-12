@@ -1,0 +1,2 @@
+class BestScore < ApplicationRecord
+end

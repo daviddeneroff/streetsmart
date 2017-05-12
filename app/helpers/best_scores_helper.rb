@@ -1,0 +1,2 @@
+module BestScoresHelper
+end

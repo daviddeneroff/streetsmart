@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class HighScoreTest < ActiveSupport::TestCase
+class BestScoreTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

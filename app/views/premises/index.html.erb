@@ -1,0 +1,95 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Premises</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Borough</th>
+      <th>Block</th>
+      <th>Lot</th>
+      <th>Bbl</th>
+      <th>Market</th>
+      <th>Submarket</th>
+      <th>Address</th>
+      <th>Percent of total retail</th>
+      <th>Premise type</th>
+      <th>Basement sf</th>
+      <th>Ground floor sf</th>
+      <th>Mezzanine sf</th>
+      <th>Upper floor sf</th>
+      <th>Shopping center</th>
+      <th>Step up or down</th>
+      <th>Stories of retail</th>
+      <th>Street frontage</th>
+      <th>Ceiling</th>
+      <th>Corner store</th>
+      <th>Total sf</th>
+      <th>Location grade</th>
+      <th>Quality grade</th>
+      <th>Premise grade</th>
+      <th>Tenant</th>
+      <th>Occupancy</th>
+      <th>Retail type</th>
+      <th>Retail subtype</th>
+      <th>Retailer size</th>
+      <th>Retailer price point</th>
+      <th>Retailer nationality</th>
+      <th>Additonal retailer info</th>
+      <th>Comp</th>
+      <th>Zip code</th>
+      <th>Xcoordinate</th>
+      <th>Ycoordinate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @premises.each do |premise| %>
+      <tr>
+        <td><%= premise.borough %></td>
+        <td><%= premise.block %></td>
+        <td><%= premise.lot %></td>
+        <td><%= premise.bbl %></td>
+        <td><%= premise.market %></td>
+        <td><%= premise.submarket %></td>
+        <td><%= premise.address %></td>
+        <td><%= premise.percent_of_total_retail %></td>
+        <td><%= premise.premise_type %></td>
+        <td><%= premise.basement_sf %></td>
+        <td><%= premise.ground_floor_sf %></td>
+        <td><%= premise.mezzanine_sf %></td>
+        <td><%= premise.upper_floor_sf %></td>
+        <td><%= premise.shopping_center %></td>
+        <td><%= premise.step_up_or_down %></td>
+        <td><%= premise.stories_of_retail %></td>
+        <td><%= premise.street_frontage %></td>
+        <td><%= premise.ceiling %></td>
+        <td><%= premise.corner_store %></td>
+        <td><%= premise.total_sf %></td>
+        <td><%= premise.location_grade %></td>
+        <td><%= premise.quality_grade %></td>
+        <td><%= premise.premise_grade %></td>
+        <td><%= premise.tenant %></td>
+        <td><%= premise.occupancy %></td>
+        <td><%= premise.retail_type %></td>
+        <td><%= premise.retail_subtype %></td>
+        <td><%= premise.retailer_size %></td>
+        <td><%= premise.retailer_price_point %></td>
+        <td><%= premise.retailer_nationality %></td>
+        <td><%= premise.additonal_retailer_info %></td>
+        <td><%= premise.comp %></td>
+        <td><%= premise.zip_code %></td>
+        <td><%= premise.xcoordinate %></td>
+        <td><%= premise.ycoordinate %></td>
+        <td><%= link_to 'Show', premise %></td>
+        <td><%= link_to 'Edit', edit_premise_path(premise) %></td>
+        <td><%= link_to 'Destroy', premise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Premise', new_premise_path %>

@@ -1,10 +1,10 @@
 class PremisesController < ApplicationController
   before_action :set_premise, only: [:show, :edit, :update, :destroy]
-
   # GET /premises
   # GET /premises.json
   def index
     @premises = Premise.all
+    # @premises = Premise.all.where(bbl: '1-208-19')
   end
 
   # GET /premises/1

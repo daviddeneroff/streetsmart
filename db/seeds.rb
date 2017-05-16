@@ -20,7 +20,7 @@ csv.each do |row|
   t.market = row['market']
   t.submarket = row['submarket']
   t.address = row['address']
-  t.percent_of_total_retail = row['percent_of_total_retailpercent_of_total_retail']
+  t.percent_of_total_retail = row['percent_of_total_retail']
   t.premise_type = row['premise_type']
   t.basement_sf = row['basement_sf']
   t.ground_floor_sf = row['ground_floor_sf']

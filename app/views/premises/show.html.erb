@@ -1,43 +1,88 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Borough:</strong>
-  <%= @premise.borough %>
+  <strong>Building address:</strong>
+  <%= @premise.building_address %>
 </p>
 
 <p>
-  <strong>Block:</strong>
-  <%= @premise.block %>
+  <strong>Tenant name:</strong>
+  <%= @premise.tenant_name %>
 </p>
 
 <p>
-  <strong>Lot:</strong>
-  <%= @premise.lot %>
+  <strong>Occupancy status:</strong>
+  <%= @premise.occupancy_status %>
 </p>
 
 <p>
-  <strong>Bbl:</strong>
-  <%= @premise.bbl %>
+  <strong>Availability status:</strong>
+  <%= @premise.availability_status %>
 </p>
 
 <p>
-  <strong>Market:</strong>
-  <%= @premise.market %>
+  <strong>Retail type:</strong>
+  <%= @premise.retail_type %>
 </p>
 
 <p>
-  <strong>Submarket:</strong>
-  <%= @premise.submarket %>
+  <strong>Retail sub type:</strong>
+  <%= @premise.retail_sub_type %>
 </p>
 
 <p>
-  <strong>Address:</strong>
-  <%= @premise.address %>
+  <strong>Retailer footprint:</strong>
+  <%= @premise.retailer_footprint %>
 </p>
 
 <p>
-  <strong>Percent of total retail:</strong>
-  <%= @premise.percent_of_total_retail %>
+  <strong>Retail price point:</strong>
+  <%= @premise.retail_price_point %>
+</p>
+
+<p>
+  <strong>Retailer heritage:</strong>
+  <%= @premise.retailer_heritage %>
+</p>
+
+<p>
+  <strong>Retailer value:</strong>
+  <%= @premise.retailer_value %>
+</p>
+
+<p>
+  <strong>Retailer occurence:</strong>
+  <%= @premise.retailer_occurence %>
+</p>
+
+<p>
+  <strong>Location quality:</strong>
+  <%= @premise.location_quality %>
+</p>
+
+<p>
+  <strong>Premise quality:</strong>
+  <%= @premise.premise_quality %>
+</p>
+
+<p>
+  <strong>Quality ranking:</strong>
+  <%= @premise.quality_ranking %>
+</p>
+
+<p>
+  <strong>Class mix:</strong>
+  <%= @premise.class_mix %>
+</p>
+
+<p>
+  <strong>Corner store:</strong>
+  <%= @premise.corner_store %>
+</p>
+
+<p>
+  <strong>Percent of bldg retail:</strong>
+  <%= @premise.percent_of_bldg_retail %>
 </p>
 
 <p>
@@ -51,23 +96,18 @@
 </p>
 
 <p>
-  <strong>Ground floor sf:</strong>
-  <%= @premise.ground_floor_sf %>
+  <strong>Ground fl sf:</strong>
+  <%= @premise.ground_fl_sf %>
 </p>
 
 <p>
-  <strong>Mezzanine sf:</strong>
-  <%= @premise.mezzanine_sf %>
+  <strong>Mezzazine:</strong>
+  <%= @premise.mezzazine %>
 </p>
 
 <p>
-  <strong>Upper floor sf:</strong>
-  <%= @premise.upper_floor_sf %>
-</p>
-
-<p>
-  <strong>Shopping center:</strong>
-  <%= @premise.shopping_center %>
+  <strong>Upper fl sf:</strong>
+  <%= @premise.upper_fl_sf %>
 </p>
 
 <p>
@@ -76,8 +116,8 @@
 </p>
 
 <p>
-  <strong>Stories of retail:</strong>
-  <%= @premise.stories_of_retail %>
+  <strong>Number of retail stories:</strong>
+  <%= @premise.number_of_retail_stories %>
 </p>
 
 <p>
@@ -86,78 +126,38 @@
 </p>
 
 <p>
+  <strong>Approx retail sf:</strong>
+  <%= @premise.approx_retail_sf %>
+</p>
+
+<p>
+  <strong>Street frontage ratio:</strong>
+  <%= @premise.street_frontage_ratio %>
+</p>
+
+<p>
   <strong>Ceiling:</strong>
   <%= @premise.ceiling %>
 </p>
 
 <p>
-  <strong>Corner store:</strong>
-  <%= @premise.corner_store %>
+  <strong>Contains retail:</strong>
+  <%= @premise.contains_retail %>
 </p>
 
 <p>
-  <strong>Total sf:</strong>
-  <%= @premise.total_sf %>
+  <strong>Submarket:</strong>
+  <%= @premise.submarket %>
 </p>
 
 <p>
-  <strong>Location grade:</strong>
-  <%= @premise.location_grade %>
+  <strong>Total number of retail space:</strong>
+  <%= @premise.total_number_of_retail_space %>
 </p>
 
 <p>
-  <strong>Quality grade:</strong>
-  <%= @premise.quality_grade %>
-</p>
-
-<p>
-  <strong>Premise grade:</strong>
-  <%= @premise.premise_grade %>
-</p>
-
-<p>
-  <strong>Tenant:</strong>
-  <%= @premise.tenant %>
-</p>
-
-<p>
-  <strong>Occupancy:</strong>
-  <%= @premise.occupancy %>
-</p>
-
-<p>
-  <strong>Retail type:</strong>
-  <%= @premise.retail_type %>
-</p>
-
-<p>
-  <strong>Retail subtype:</strong>
-  <%= @premise.retail_subtype %>
-</p>
-
-<p>
-  <strong>Retailer size:</strong>
-  <%= @premise.retailer_size %>
-</p>
-
-<p>
-  <strong>Retailer price point:</strong>
-  <%= @premise.retailer_price_point %>
-</p>
-
-<p>
-  <strong>Retailer nationality:</strong>
-  <%= @premise.retailer_nationality %>
-</p>
-
-<p>
-  <strong>Additonal retailer info:</strong>
-  <%= @premise.additonal_retailer_info %>
-</p>
-
-<p>
-  <strong>Comp:</strong>
-  <%= @premise.comp %>
+  <strong>Total retail space:</strong>
+  <%= @premise.total_retail_space %>
 </p>
 
 <p>
@@ -166,13 +166,138 @@
 </p>
 
 <p>
-  <strong>Xcoordinate:</strong>
-  <%= @premise.xcoordinate %>
+  <strong>Xcord:</strong>
+  <%= @premise.xcord %>
 </p>
 
 <p>
-  <strong>Ycoordinate:</strong>
-  <%= @premise.ycoordinate %>
+  <strong>Ycord:</strong>
+  <%= @premise.ycord %>
+</p>
+
+<p>
+  <strong>Building status:</strong>
+  <%= @premise.building_status %>
+</p>
+
+<p>
+  <strong>Borocode:</strong>
+  <%= @premise.borocode %>
+</p>
+
+<p>
+  <strong>Borough:</strong>
+  <%= @premise.borough %>
+</p>
+
+<p>
+  <strong>Bbl:</strong>
+  <%= @premise.bbl %>
+</p>
+
+<p>
+  <strong>Block:</strong>
+  <%= @premise.block %>
+</p>
+
+<p>
+  <strong>Lot:</strong>
+  <%= @premise.lot %>
+</p>
+
+<p>
+  <strong>Frequency of demand:</strong>
+  <%= @premise.frequency_of_demand %>
+</p>
+
+<p>
+  <strong>Location appearance:</strong>
+  <%= @premise.location_appearance %>
+</p>
+
+<p>
+  <strong>Walkability score:</strong>
+  <%= @premise.walkability_score %>
+</p>
+
+<p>
+  <strong>Viability score:</strong>
+  <%= @premise.viability_score %>
+</p>
+
+<p>
+  <strong>Demographic:</strong>
+  <%= @premise.demographic %>
+</p>
+
+<p>
+  <strong>Zip code from:</strong>
+  <%= @premise.zip_code_from %>
+</p>
+
+<p>
+  <strong>Zip code to:</strong>
+  <%= @premise.zip_code_to %>
+</p>
+
+<p>
+  <strong>Submarket health index:</strong>
+  <%= @premise.submarket_health_index %>
+</p>
+
+<p>
+  <strong>Gentrifcation score:</strong>
+  <%= @premise.gentrifcation_score %>
+</p>
+
+<p>
+  <strong>Footfall index:</strong>
+  <%= @premise.footfall_index %>
+</p>
+
+<p>
+  <strong>Block appeal:</strong>
+  <%= @premise.block_appeal %>
+</p>
+
+<p>
+  <strong>Target shopper profile:</strong>
+  <%= @premise.target_shopper_profile %>
+</p>
+
+<p>
+  <strong>Stability index:</strong>
+  <%= @premise.stability_index %>
+</p>
+
+<p>
+  <strong>Growth index:</strong>
+  <%= @premise.growth_index %>
+</p>
+
+<p>
+  <strong>Retailer viability:</strong>
+  <%= @premise.retailer_viability %>
+</p>
+
+<p>
+  <strong>Venting:</strong>
+  <%= @premise.venting %>
+</p>
+
+<p>
+  <strong>Social media:</strong>
+  <%= @premise.social_media %>
+</p>
+
+<p>
+  <strong>Total bldg front:</strong>
+  <%= @premise.total_bldg_front %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @premise.active %>
 </p>
 
 <%= link_to 'Edit', edit_premise_path(@premise) %> |

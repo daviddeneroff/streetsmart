@@ -1,45 +1,72 @@
 <p id="notice"><%= notice %></p>
 
+<a href="/download">sample data download</a>
+
 <h1>Premises</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Borough</th>
-      <th>Block</th>
-      <th>Lot</th>
-      <th>Bbl</th>
-      <th>Market</th>
-      <th>Submarket</th>
-      <th>Address</th>
-      <th>Percent of total retail</th>
+      <th>Building address</th>
+      <th>Tenant name</th>
+      <th>Occupancy status</th>
+      <th>Availability status</th>
+      <th>Retail type</th>
+      <th>Retail sub type</th>
+      <th>Retailer footprint</th>
+      <th>Retail price point</th>
+      <th>Retailer heritage</th>
+      <th>Retailer value</th>
+      <th>Retailer occurence</th>
+      <th>Location quality</th>
+      <th>Premise quality</th>
+      <th>Quality ranking</th>
+      <th>Class mix</th>
+      <th>Corner store</th>
+      <th>Percent of bldg retail</th>
       <th>Premise type</th>
       <th>Basement sf</th>
-      <th>Ground floor sf</th>
-      <th>Mezzanine sf</th>
-      <th>Upper floor sf</th>
-      <th>Shopping center</th>
+      <th>Ground fl sf</th>
+      <th>Mezzazine</th>
+      <th>Upper fl sf</th>
       <th>Step up or down</th>
-      <th>Stories of retail</th>
+      <th>Number of retail stories</th>
       <th>Street frontage</th>
+      <th>Approx retail sf</th>
+      <th>Street frontage ratio</th>
       <th>Ceiling</th>
-      <th>Corner store</th>
-      <th>Total sf</th>
-      <th>Location grade</th>
-      <th>Quality grade</th>
-      <th>Premise grade</th>
-      <th>Tenant</th>
-      <th>Occupancy</th>
-      <th>Retail type</th>
-      <th>Retail subtype</th>
-      <th>Retailer size</th>
-      <th>Retailer price point</th>
-      <th>Retailer nationality</th>
-      <th>Additonal retailer info</th>
-      <th>Comp</th>
+      <th>Contains retail</th>
+      <th>Submarket</th>
+      <th>Total number of retail space</th>
+      <th>Total retail space</th>
       <th>Zip code</th>
-      <th>Xcoordinate</th>
-      <th>Ycoordinate</th>
+      <th>Xcord</th>
+      <th>Ycord</th>
+      <th>Building status</th>
+      <th>Borocode</th>
+      <th>Borough</th>
+      <th>Bbl</th>
+      <th>Block</th>
+      <th>Lot</th>
+      <th>Frequency of demand</th>
+      <th>Location appearance</th>
+      <th>Walkability score</th>
+      <th>Viability score</th>
+      <th>Demographic</th>
+      <th>Zip code from</th>
+      <th>Zip code to</th>
+      <th>Submarket health index</th>
+      <th>Gentrifcation score</th>
+      <th>Footfall index</th>
+      <th>Block appeal</th>
+      <th>Target shopper profile</th>
+      <th>Stability index</th>
+      <th>Growth index</th>
+      <th>Retailer viability</th>
+      <th>Venting</th>
+      <th>Social media</th>
+      <th>Total bldg front</th>
+      <th>Active</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -47,43 +74,69 @@
   <tbody>
     <% @premises.each do |premise| %>
       <tr>
-        <td><%= premise.borough %></td>
-        <td><%= premise.block %></td>
-        <td><%= premise.lot %></td>
-        <td><%= premise.bbl %></td>
-        <td><%= premise.market %></td>
-        <td><%= premise.submarket %></td>
-        <td><%= premise.address %></td>
-        <td><%= premise.percent_of_total_retail %></td>
+        <td><%= premise.building_address %></td>
+        <td><%= premise.tenant_name %></td>
+        <td><%= premise.occupancy_status %></td>
+        <td><%= premise.availability_status %></td>
+        <td><%= premise.retail_type %></td>
+        <td><%= premise.retail_sub_type %></td>
+        <td><%= premise.retailer_footprint %></td>
+        <td><%= premise.retail_price_point %></td>
+        <td><%= premise.retailer_heritage %></td>
+        <td><%= premise.retailer_value %></td>
+        <td><%= premise.retailer_occurence %></td>
+        <td><%= premise.location_quality %></td>
+        <td><%= premise.premise_quality %></td>
+        <td><%= premise.quality_ranking %></td>
+        <td><%= premise.class_mix %></td>
+        <td><%= premise.corner_store %></td>
+        <td><%= premise.percent_of_bldg_retail %></td>
         <td><%= premise.premise_type %></td>
         <td><%= premise.basement_sf %></td>
-        <td><%= premise.ground_floor_sf %></td>
-        <td><%= premise.mezzanine_sf %></td>
-        <td><%= premise.upper_floor_sf %></td>
-        <td><%= premise.shopping_center %></td>
+        <td><%= premise.ground_fl_sf %></td>
+        <td><%= premise.mezzazine %></td>
+        <td><%= premise.upper_fl_sf %></td>
         <td><%= premise.step_up_or_down %></td>
-        <td><%= premise.stories_of_retail %></td>
+        <td><%= premise.number_of_retail_stories %></td>
         <td><%= premise.street_frontage %></td>
+        <td><%= premise.approx_retail_sf %></td>
+        <td><%= premise.street_frontage_ratio %></td>
         <td><%= premise.ceiling %></td>
-        <td><%= premise.corner_store %></td>
-        <td><%= premise.total_sf %></td>
-        <td><%= premise.location_grade %></td>
-        <td><%= premise.quality_grade %></td>
-        <td><%= premise.premise_grade %></td>
-        <td><%= premise.tenant %></td>
-        <td><%= premise.occupancy %></td>
-        <td><%= premise.retail_type %></td>
-        <td><%= premise.retail_subtype %></td>
-        <td><%= premise.retailer_size %></td>
-        <td><%= premise.retailer_price_point %></td>
-        <td><%= premise.retailer_nationality %></td>
-        <td><%= premise.additonal_retailer_info %></td>
-        <td><%= premise.comp %></td>
+        <td><%= premise.contains_retail %></td>
+        <td><%= premise.submarket %></td>
+        <td><%= premise.total_number_of_retail_space %></td>
+        <td><%= premise.total_retail_space %></td>
         <td><%= premise.zip_code %></td>
-        <td><%= premise.xcoordinate %></td>
-        <td><%= premise.ycoordinate %></td>
+        <td><%= premise.xcord %></td>
+        <td><%= premise.ycord %></td>
+        <td><%= premise.building_status %></td>
+        <td><%= premise.borocode %></td>
+        <td><%= premise.borough %></td>
+        <td><%= premise.bbl %></td>
+        <td><%= premise.block %></td>
+        <td><%= premise.lot %></td>
+        <td><%= premise.frequency_of_demand %></td>
+        <td><%= premise.location_appearance %></td>
+        <td><%= premise.walkability_score %></td>
+        <td><%= premise.viability_score %></td>
+        <td><%= premise.demographic %></td>
+        <td><%= premise.zip_code_from %></td>
+        <td><%= premise.zip_code_to %></td>
+        <td><%= premise.submarket_health_index %></td>
+        <td><%= premise.gentrifcation_score %></td>
+        <td><%= premise.footfall_index %></td>
+        <td><%= premise.block_appeal %></td>
+        <td><%= premise.target_shopper_profile %></td>
+        <td><%= premise.stability_index %></td>
+        <td><%= premise.growth_index %></td>
+        <td><%= premise.retailer_viability %></td>
+        <td><%= premise.venting %></td>
+        <td><%= premise.social_media %></td>
+        <td><%= premise.total_bldg_front %></td>
+        <td><%= premise.active %></td>
         <td><%= link_to 'Show', premise %></td>
         <td><%= link_to 'Edit', edit_premise_path(premise) %></td>
+        <td><%= link_to 'Create from this base', new_premise_path(premise.bbl) %></td>
         <td><%= link_to 'Destroy', premise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

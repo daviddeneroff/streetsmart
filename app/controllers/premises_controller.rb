@@ -15,7 +15,6 @@ class PremisesController < ApplicationController
   # GET /premises/new
   def new
     @oldRecord = Premise.where(bbl: params["format"])
-    p '#########################################'
     p @oldRecord
     @premise = Premise.new
   end

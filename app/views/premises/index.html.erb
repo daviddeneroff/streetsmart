@@ -136,7 +136,7 @@
         <td><%= premise.active %></td>
         <td><%= link_to 'Show', premise %></td>
         <td><%= link_to 'Edit', edit_premise_path(premise) %></td>
-        <td><%= link_to 'Create from this base', new_premise_path(premise.bbl) %></td>
+        <!-- <td><%= link_to 'Create from this base', new_premise_path(premise.bbl) %></td> -->
         <td><%= link_to 'Destroy', premise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

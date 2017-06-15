@@ -16,6 +16,9 @@ class PremisesController < ApplicationController
   # GET /premises/1
   # GET /premises/1.json
   def show
+    @initialPremise = Premise.find(params[:id])
+    @nextPremise = @initialPremise.next
+    @previousPremise = @initialPremise.previous
   end
 
   # GET /premises/new

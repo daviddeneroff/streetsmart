@@ -5,6 +5,12 @@ class PremisesController < ApplicationController
   # GET /premises.json
   def index
     @premises = Premise.all
+
+    respond_to do |format|
+      format.html
+      format.xls { send_data @premises.to_csv, filename: "DACre-DB#{Date.today}.xls" }
+      format.csv { send_data @premises.to_csv, filename: "DACre-DB#{Date.today}.csv" }
+    end
   end
 
   # GET /premises/1

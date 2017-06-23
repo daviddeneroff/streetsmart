@@ -73,8 +73,6 @@ csv.each do |row|
   t.social_media = row['social_media']
   t.total_bldg_front = row['total_bldg_front']
   t.active = row['active']
-  # t.notes = row['notes']
-  # t.updated_at = Time.now()
 
   t.save
 

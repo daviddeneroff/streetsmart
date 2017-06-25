@@ -23,8 +23,7 @@ class PremisesController < ApplicationController
 
   # GET /premises/new
   def new
-    @oldRecord = Premise.where(bbl: params["format"])
-    p @oldRecord
+    @oldRecord = Premise.where(id: params["format"])
     @premise = Premise.new
   end
 

@@ -11,308 +11,620 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :building_address %>
-    <%= form.text_field :building_address, id: :premise_building_address %>
-  </div>
+  <% if @oldRecord.count == 0 %>
+    <div class="form-container">
+      <div class="field">
+        <%= form.label :building_address %>
+        <%= form.text_field :building_address, id: :premise_building_address %>
+      </div>
 
-  <div class="field">
-    <%= form.label :tenant_name %>
-    <%= form.text_field :tenant_name, id: :premise_tenant_name %>
-  </div>
+      <div class="field">
+        <%= form.label :tenant_name %>
+        <%= form.text_field :tenant_name, id: :premise_tenant_name %>
+      </div>
 
-  <div class="field">
-    <%= form.label :occupancy_status %>
-    <%= form.select :occupancy_status, ['', 'Occupied', 'Vacant'] %>
-  </div>
+      <div class="field">
+        <%= form.label :occupancy_status %>
+        <%= form.select :occupancy_status, ['', 'Occupied', 'Vacant'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :availability_status %>
-    <%= form.select :availability_status, ['', 'Available', 'Unavailable'] %>
-  </div>
+      <div class="field">
+        <%= form.label :availability_status %>
+        <%= form.select :availability_status, ['', 'Available', 'Unavailable'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :retail_type %>
-    <%= form.select :retail_type, ['', 'Automotive', 'Household goods', 'Electronics', 'Building', 'Garden', 'Animal', 'Grocery', 'Liquor store', 'Health and personal care', 'Apparel', 'Accessoires', 'Sporting goods', 'Toys', 'hobby', 'Books', 'Gifts and memorabillia', 'General merchandise', 'Office supplies', 'postal supplies and services', 'Gallery', 'Restaurant & bar', 'Personal services', 'Gym', 'Medical Services', 'Bank' , 'Laundry', 'dry cleaning', 'Other services'] %>
-  </div>
+      <div class="field">
+        <%= form.label :retail_type %>
+        <%= form.select :retail_type, ['', 'Automotive', 'Household goods', 'Electronics', 'Building', 'Garden', 'Animal', 'Grocery', 'Liquor store', 'Health and personal care', 'Apparel', 'Accessoires', 'Sporting goods', 'Toys', 'hobby', 'Books', 'Gifts and memorabillia', 'General merchandise', 'Office supplies', 'postal supplies and services', 'Gallery', 'Restaurant & bar', 'Personal services', 'Gym', 'Medical Services', 'Bank' , 'Laundry', 'dry cleaning', 'Other services'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :retail_sub_type %>
+      <div class="field">
+        <%= form.label :retail_sub_type %>
 
-    <%= form.select :retail_sub_type, ['', 'Automotive dealership', 'Automotive service',  'Automotive parts',  'Home décor',  'Kitchen & party supplies',  'Computer', 'cellular & other', 'hardware', 'Games & software', 'Movies & music', 'Household appliances', 'Electronics', 'department store', 'Furniture', 'Hardware',  'Garden center/florist', 'Pet related', 'Supermarket', 'Big box', 'Wholesale', 'Deli', 'convenience store', 'Butcher', 'bakery', 'seafood', 'cheese', 'chocolate', 'tea & coffee', 'other specialized food', 'Liquor store',  'Cosmetics & beauty supply', 'Optical', 'Drugstore', 'Pharmacy',  'Clothing', 'Leather and luggage', 'Shoes', 'Jewelry', 'Watches', 'Sporting apparel', 'Sporting equipment', 'Bikes', 'Toys', 'Hobby', 'Book stores', 'Gift shop', 'memorabillia and souveniers', 'Department stores', 'Discout', 'dollar stores', 'Office supplies', 'Postal supplies and services', 'Art Auctioneer', 'Restaurant',  'Bar', 'lounge', 'club', 'Café', 'Fast Food', 'Take-out', 'Spa', 'Hairstudio', 'barber', 'Nailstudio', 'Gym', 'Doctors', 'emergency care', 'Bank', 'Laundry', 'dry cleaning', 'Other services'] %>
-  </div>
+        <%= form.select :retail_sub_type, ['', 'Automotive dealership', 'Automotive service',  'Automotive parts',  'Home décor',  'Kitchen & party supplies',  'Computer', 'cellular & other', 'hardware', 'Games & software', 'Movies & music', 'Household appliances', 'Electronics', 'department store', 'Furniture', 'Hardware',  'Garden center/florist', 'Pet related', 'Supermarket', 'Big box', 'Wholesale', 'Deli', 'convenience store', 'Butcher', 'bakery', 'seafood', 'cheese', 'chocolate', 'tea & coffee', 'other specialized food', 'Liquor store',  'Cosmetics & beauty supply', 'Optical', 'Drugstore', 'Pharmacy',  'Clothing', 'Leather and luggage', 'Shoes', 'Jewelry', 'Watches', 'Sporting apparel', 'Sporting equipment', 'Bikes', 'Toys', 'Hobby', 'Book stores', 'Gift shop', 'memorabillia and souveniers', 'Department stores', 'Discout', 'dollar stores', 'Office supplies', 'Postal supplies and services', 'Art Auctioneer', 'Restaurant',  'Bar', 'lounge', 'club', 'Café', 'Fast Food', 'Take-out', 'Spa', 'Hairstudio', 'barber', 'Nailstudio', 'Gym', 'Doctors', 'emergency care', 'Bank', 'Laundry', 'dry cleaning', 'Other services'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :retailer_footprint %>
-    <%= form.select :retailer_footprint, ['', 'Local Chain / Independant', 'Regional Presence', 'National Presence', 'International Presence'] %>
-  </div>
+      <div class="field">
+        <%= form.label :retailer_footprint %>
+        <%= form.select :retailer_footprint, ['', 'Local Chain / Independant', 'Regional Presence', 'National Presence', 'International Presence'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :retail_price_point %>
-    <%= form.select :retail_price_point, ['', '$', '$$', '$$$', '$$$$'] %>
-  </div>
+      <div class="field">
+        <%= form.label :retail_price_point %>
+        <%= form.select :retail_price_point, ['', '$', '$$', '$$$', '$$$$'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :retailer_heritage %>
-    <%= form.select :retailer_heritage, ['','European', 'Asian', 'South American', 'North American', 'African', 'Australian', 'Middle Eastern'] %>
-  </div>
+      <div class="field">
+        <%= form.label :retailer_heritage %>
+        <%= form.select :retailer_heritage, ['','European', 'Asian', 'South American', 'North American', 'African', 'Australian', 'Middle Eastern'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :retailer_value %>
-    <%= form.select :retailer_value, ['','Alternative', 'Trendy', 'Youth Child', 'Infant', 'Senior', 'Value Designer', 'Organic / Veggie',  'Touristy', 'Traditional', 'Concept store', 'Mens', 'Womens'] %>
-  </div>
+      <div class="field">
+        <%= form.label :retailer_value %>
+        <%= form.select :retailer_value, ['','Alternative', 'Trendy', 'Youth Child', 'Infant', 'Senior', 'Value Designer', 'Organic / Veggie',  'Touristy', 'Traditional', 'Concept store', 'Mens', 'Womens'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :retailer_occurence %>
-    <%= form.select :retailer_occurence, ['','single location', 'multiple locations'] %>
-  </div>
+      <div class="field">
+        <%= form.label :retailer_occurence %>
+        <%= form.select :retailer_occurence, ['','single location', 'multiple locations'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :location_quality %>
-    <%= form.select :location_quality, ['','1 - Low End', '2 - Average', '3 - High Quality'] %>
-  </div>
+      <div class="field">
+        <%= form.label :location_quality %>
+        <%= form.select :location_quality, ['','1 - Low End', '2 - Average', '3 - High Quality'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :premise_quality %>
-    <%= form.select :premise_quality, ['','1 - Low End', '2 - Average', '3 - High Quality'] %>
-  </div>
+      <div class="field">
+        <%= form.label :premise_quality %>
+        <%= form.select :premise_quality, ['','1 - Low End', '2 - Average', '3 - High Quality'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :quality_ranking %>
-     <%= form.select :quality_ranking, ['','1', '2', '3', '4', '5', '6'] %>
-  </div>
+      <div class="field">
+        <%= form.label :quality_ranking %>
+         <%= form.select :quality_ranking, ['','1', '2', '3', '4', '5', '6'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :class_mix %>
-    <%= form.select :class_mix, ['','Tertiary', 'Average', 'Good', 'Prime'] %>
-  </div>
+      <div class="field">
+        <%= form.label :class_mix %>
+        <%= form.select :class_mix, ['','Tertiary', 'Average', 'Good', 'Prime'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :corner_store %>
-    <%= form.select :corner_store, ['','yes', 'no'] %>
-  </div>
+      <div class="field">
+        <%= form.label :corner_store %>
+        <%= form.select :corner_store, ['','yes', 'no'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :percent_of_bldg_retail %>
-    <%= form.number_field :percent_of_bldg_retail, id: :premise_percent_of_bldg_retail %>
-  </div>
+      <div class="field">
+        <%= form.label :percent_of_bldg_retail %>
+        <%= form.number_field :percent_of_bldg_retail, id: :premise_percent_of_bldg_retail %>
+      </div>
 
-  <div class="field">
-    <%= form.label :premise_type %>
-    <%= form.select :premise_type, ['','street frontage', 'interior'] %>
-  </div>
+      <div class="field">
+        <%= form.label :premise_type %>
+        <%= form.select :premise_type, ['','street frontage', 'interior'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :basement_sf %>
-    <%= form.number_field :basement_sf, id: :premise_basement_sf %>
-  </div>
+      <div class="field">
+        <%= form.label :basement_sf %>
+        <%= form.number_field :basement_sf, id: :premise_basement_sf %>
+      </div>
 
-  <div class="field">
-    <%= form.label :ground_fl_sf %>
-    <%= form.number_field :ground_fl_sf, id: :premise_ground_fl_sf %>
-  </div>
+      <div class="field">
+        <%= form.label :ground_fl_sf %>
+        <%= form.number_field :ground_fl_sf, id: :premise_ground_fl_sf %>
+      </div>
 
-  <div class="field">
-    <%= form.label :mezzazine %>
-    <%= form.number_field :mezzazine, id: :premise_mezzazine %>
-  </div>
+      <div class="field">
+        <%= form.label :mezzazine %>
+        <%= form.number_field :mezzazine, id: :premise_mezzazine %>
+      </div>
 
-  <div class="field">
-    <%= form.label :upper_fl_sf %>
-    <%= form.number_field :upper_fl_sf, id: :premise_upper_fl_sf %>
-  </div>
+      <div class="field">
+        <%= form.label :upper_fl_sf %>
+        <%= form.number_field :upper_fl_sf, id: :premise_upper_fl_sf %>
+      </div>
 
-  <div class="field">
-    <%= form.label :step_up_or_down %>
-    <%= form.select :step_up_or_down, ['', 'step up', 'step down', 'none'] %>
-  </div>
+      <div class="field">
+        <%= form.label :step_up_or_down %>
+        <%= form.select :step_up_or_down, ['', 'step up', 'step down', 'none'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :number_of_retail_stories %>
-    <%= form.number_field :number_of_retail_stories, id: :premise_number_of_retail_stories %>
-  </div>
+      <div class="field">
+        <%= form.label :number_of_retail_stories %>
+        <%= form.number_field :number_of_retail_stories, id: :premise_number_of_retail_stories %>
+      </div>
 
-  <div class="field">
-    <%= form.label :street_frontage %>
-    <%= form.number_field :street_frontage, id: :premise_street_frontage %>
-  </div>
+      <div class="field">
+        <%= form.label :street_frontage %>
+        <%= form.number_field :street_frontage, id: :premise_street_frontage %>
+      </div>
 
-  <div class="field">
-    <%= form.label :approx_retail_sf %>
-    <%= form.number_field :approx_retail_sf, id: :premise_approx_retail_sf %>
-  </div>
+      <div class="field">
+        <%= form.label :approx_retail_sf %>
+        <%= form.number_field :approx_retail_sf, id: :premise_approx_retail_sf %>
+      </div>
 
-  <div class="field">
-    <%= form.label :street_frontage_ratio %>
-    <%= form.number_field :street_frontage_ratio, id: :premise_street_frontage_ratio %>
-  </div>
+      <div class="field">
+        <%= form.label :street_frontage_ratio %>
+        <%= form.number_field :street_frontage_ratio, id: :premise_street_frontage_ratio %>
+      </div>
 
-  <div class="field">
-    <%= form.label :ceiling %>
-    <%= form.select :step_up_or_down, ['', 'high', 'standard', 'low'] %>
-  </div>
+      <div class="field">
+        <%= form.label :ceiling %>
+        <%= form.select :step_up_or_down, ['', 'high', 'standard', 'low'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :contains_retail %>
-    <%= form.select :contains_retail, ['', 'yes', 'no'] %>
-  </div>
+      <div class="field">
+        <%= form.label :contains_retail %>
+        <%= form.select :contains_retail, ['', 'yes', 'no'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :submarket %>
-    <%= form.select :contains_retail, ['','TriBeCa','Washington Heights','Fort George','Midtown South','Upper East Side','Midtown','SoHo','Financial District','East Village','Chelsea','Harlem','Clinton','Garment District','Midtown East','Union Square','Murray Hill','Kips Bay','Flatiron District','Theatre District - Times Square','Hudson Square','Upper West Side','Morningside Heights','Korea Town','West Village','Midtown West','Hudson Yards','Hells Kitchen','Port Authority','NoHo','Stuyvesant Town','Gramercy Park','Two Bridges','Civic Center','Peter Cooper Village','Little Italy','Chinatown','Lower East Side','Battery Park City','Harlem East'] %>
-  </div>
+      <div class="field">
+        <%= form.label :submarket %>
+        <%= form.select :contains_retail, ['','TriBeCa','Washington Heights','Fort George','Midtown South','Upper East Side','Midtown','SoHo','Financial District','East Village','Chelsea','Harlem','Clinton','Garment District','Midtown East','Union Square','Murray Hill','Kips Bay','Flatiron District','Theatre District - Times Square','Hudson Square','Upper West Side','Morningside Heights','Korea Town','West Village','Midtown West','Hudson Yards','Hells Kitchen','Port Authority','NoHo','Stuyvesant Town','Gramercy Park','Two Bridges','Civic Center','Peter Cooper Village','Little Italy','Chinatown','Lower East Side','Battery Park City','Harlem East'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :total_number_of_retail_space %>
-    <%= form.number_field :total_number_of_retail_space, id: :premise_total_number_of_retail_space %>
-  </div>
+      <div class="field">
+        <%= form.label :total_number_of_retail_space %>
+        <%= form.number_field :total_number_of_retail_space, id: :premise_total_number_of_retail_space %>
+      </div>
 
-  <div class="field">
-    <%= form.label :total_retail_space %>
-    <%= form.number_field :total_retail_space, id: :premise_total_retail_space %>
-  </div>
+      <div class="field">
+        <%= form.label :total_retail_space %>
+        <%= form.number_field :total_retail_space, id: :premise_total_retail_space %>
+      </div>
 
-  <div class="field">
-    <%= form.label :zip_code %>
-    <%= form.text_field :zip_code, id: :premise_zip_code %>
-  </div>
+      <div class="field">
+        <%= form.label :zip_code %>
+        <%= form.text_field :zip_code, id: :premise_zip_code %>
+      </div>
 
-  <div class="field">
-    <%= form.label :xcord %>
-    <%= form.text_field :xcord, id: :premise_xcord %>
-  </div>
+      <div class="field">
+        <%= form.label :xcord %>
+        <%= form.text_field :xcord, id: :premise_xcord %>
+      </div>
 
-  <div class="field">
-    <%= form.label :ycord %>
-    <%= form.text_field :ycord, id: :premise_ycord %>
-  </div>
+      <div class="field">
+        <%= form.label :ycord %>
+        <%= form.text_field :ycord, id: :premise_ycord %>
+      </div>
 
-  <div class="field">
-    <%= form.label :building_status %>
-    <%= form.select :building_status, ['', 'existing', 'under construction'] %>
-  </div>
+      <div class="field">
+        <%= form.label :building_status %>
+        <%= form.select :building_status, ['', 'existing', 'under construction'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :borocode %>
-    <%= form.select :borocode, ['', '1', '2', '3', '4'] %>
-  </div>
+      <div class="field">
+        <%= form.label :borocode %>
+        <%= form.select :borocode, ['', '1', '2', '3', '4'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :borough %>
-    <%= form.select :borough, ['', 'Manhattan', 'Brooklyn', 'Queens', 'Bronx'] %>
-  </div>
+      <div class="field">
+        <%= form.label :borough %>
+        <%= form.select :borough, ['', 'Manhattan', 'Brooklyn', 'Queens', 'Bronx'] %>
+      </div>
 
-  <div class="field">
-    <%= form.label :bbl %>
-    <%= form.text_field :bbl, id: :premise_bbl %>
-  </div>
+      <div class="field">
+        <%= form.label :bbl %>
+        <%= form.text_field :bbl, id: :premise_bbl %>
+      </div>
 
-  <div class="field">
-    <%= form.label :block %>
-    <%= form.number_field :block, id: :premise_block %>
-  </div>
+      <div class="field">
+        <%= form.label :block %>
+        <%= form.number_field :block, id: :premise_block %>
+      </div>
 
-  <div class="field">
-    <%= form.label :lot %>
-    <%= form.number_field :lot, id: :premise_lot %>
-  </div>
+      <div class="field">
+        <%= form.label :lot %>
+        <%= form.number_field :lot, id: :premise_lot %>
+      </div>
 
-  <div class="field">
-    <%= form.label :frequency_of_demand %>
-    <%= form.text_field :frequency_of_demand, id: :premise_frequency_of_demand %>
-  </div>
+      <div class="field">
+        <%= form.label :frequency_of_demand %>
+        <%= form.text_field :frequency_of_demand, id: :premise_frequency_of_demand %>
+      </div>
 
-  <div class="field">
-    <%= form.label :location_appearance %>
-    <%= form.text_field :location_appearance, id: :premise_location_appearance %>
-  </div>
+      <div class="field">
+        <%= form.label :location_appearance %>
+        <%= form.text_field :location_appearance, id: :premise_location_appearance %>
+      </div>
 
-  <div class="field">
-    <%= form.label :walkability_score %>
-    <%= form.text_field :walkability_score, id: :premise_walkability_score %>
-  </div>
+      <div class="field">
+        <%= form.label :walkability_score %>
+        <%= form.text_field :walkability_score, id: :premise_walkability_score %>
+      </div>
 
-  <div class="field">
-    <%= form.label :viability_score %>
-    <%= form.text_field :viability_score, id: :premise_viability_score %>
-  </div>
+      <div class="field">
+        <%= form.label :viability_score %>
+        <%= form.text_field :viability_score, id: :premise_viability_score %>
+      </div>
 
-  <div class="field">
-    <%= form.label :demographic %>
-    <%= form.text_field :demographic, id: :premise_demographic %>
-  </div>
+      <div class="field">
+        <%= form.label :demographic %>
+        <%= form.text_field :demographic, id: :premise_demographic %>
+      </div>
 
-  <div class="field">
-    <%= form.label :zip_code_from %>
-    <%= form.text_field :zip_code_from, id: :premise_zip_code_from %>
-  </div>
+      <div class="field">
+        <%= form.label :zip_code_from %>
+        <%= form.text_field :zip_code_from, id: :premise_zip_code_from %>
+      </div>
 
-  <div class="field">
-    <%= form.label :zip_code_to %>
-    <%= form.text_field :zip_code_to, id: :premise_zip_code_to %>
-  </div>
+      <div class="field">
+        <%= form.label :zip_code_to %>
+        <%= form.text_field :zip_code_to, id: :premise_zip_code_to %>
+      </div>
 
-  <div class="field">
-    <%= form.label :submarket_health_index %>
-    <%= form.text_field :submarket_health_index, id: :premise_submarket_health_index %>
-  </div>
+      <div class="field">
+        <%= form.label :submarket_health_index %>
+        <%= form.text_field :submarket_health_index, id: :premise_submarket_health_index %>
+      </div>
 
-  <div class="field">
-    <%= form.label :gentrifcation_score %>
-    <%= form.text_field :gentrifcation_score, id: :premise_gentrifcation_score %>
-  </div>
+      <div class="field">
+        <%= form.label :gentrifcation_score %>
+        <%= form.text_field :gentrifcation_score, id: :premise_gentrifcation_score %>
+      </div>
 
-  <div class="field">
-    <%= form.label :footfall_index %>
-    <%= form.text_field :footfall_index, id: :premise_footfall_index %>
-  </div>
+      <div class="field">
+        <%= form.label :footfall_index %>
+        <%= form.text_field :footfall_index, id: :premise_footfall_index %>
+      </div>
 
-  <div class="field">
-    <%= form.label :block_appeal %>
-    <%= form.text_field :block_appeal, id: :premise_block_appeal %>
-  </div>
+      <div class="field">
+        <%= form.label :block_appeal %>
+        <%= form.text_field :block_appeal, id: :premise_block_appeal %>
+      </div>
 
-  <div class="field">
-    <%= form.label :target_shopper_profile %>
-    <%= form.text_field :target_shopper_profile, id: :premise_target_shopper_profile %>
-  </div>
+      <div class="field">
+        <%= form.label :target_shopper_profile %>
+        <%= form.text_field :target_shopper_profile, id: :premise_target_shopper_profile %>
+      </div>
 
-  <div class="field">
-    <%= form.label :stability_index %>
-    <%= form.text_field :stability_index, id: :premise_stability_index %>
-  </div>
+      <div class="field">
+        <%= form.label :stability_index %>
+        <%= form.text_field :stability_index, id: :premise_stability_index %>
+      </div>
 
-  <div class="field">
-    <%= form.label :growth_index %>
-    <%= form.text_field :growth_index, id: :premise_growth_index %>
-  </div>
+      <div class="field">
+        <%= form.label :growth_index %>
+        <%= form.text_field :growth_index, id: :premise_growth_index %>
+      </div>
 
-  <div class="field">
-    <%= form.label :retailer_viability %>
-    <%= form.text_field :retailer_viability, id: :premise_retailer_viability %>
-  </div>
+      <div class="field">
+        <%= form.label :retailer_viability %>
+        <%= form.text_field :retailer_viability, id: :premise_retailer_viability %>
+      </div>
 
-  <div class="field">
-    <%= form.label :venting %>
-    <%= form.text_field :venting, id: :premise_venting %>
-  </div>
+      <div class="field">
+        <%= form.label :venting %>
+        <%= form.text_field :venting, id: :premise_venting %>
+      </div>
 
-  <div class="field">
-    <%= form.label :social_media %>
-    <%= form.text_field :social_media, id: :premise_social_media %>
-  </div>
+      <div class="field">
+        <%= form.label :social_media %>
+        <%= form.text_field :social_media, id: :premise_social_media %>
+      </div>
 
-  <div class="field">
-    <%= form.label :total_bldg_front %>
-    <%= form.number_field :total_bldg_front, id: :premise_total_bldg_front %>
-  </div>
+      <div class="field">
+        <%= form.label :total_bldg_front %>
+        <%= form.number_field :total_bldg_front, id: :premise_total_bldg_front %>
+      </div>
 
-  <div class="field">
-    <%= form.label :active %>
-    <%= form.check_box :active, id: :premise_active %>
-  </div>
+      <div class="field">
+        <%= form.label :active %>
+        <%= form.check_box :active, id: :premise_active %>
+      </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+    </div>
+  <% else %>
+    <% @oldRecord.each do |record| %>
+      <div class="form-container">
+        <div class="field">
+          <%= form.label :building_address %>
+          <%= form.text_field :building_address, id: :premise_building_address, :value => record.building_address %>
+        </div>
+
+        <div class="field">
+          <%= form.label :tenant_name %>
+          <%= form.text_field :tenant_name, id: :premise_tenant_name, :value => record.tenant_name %>
+        </div>
+
+        <div class="field">
+          <%= form.label :occupancy_status %>
+          <%= form.select :occupancy_status, ['', 'Occupied', 'Vacant'], :selected => record.occupancy_status %>
+        </div>
+
+        <div class="field">
+          <%= form.label :availability_status %>
+          <%= form.select :availability_status, ['', 'Available', 'Unavailable'], :selected => record.availability_status %>
+        </div>
+
+        <div class="field">
+          <%= form.label :retail_type %>
+          <%= form.select :retail_type, ['', 'Automotive', 'Household goods', 'Electronics', 'Building', 'Garden', 'Animal', 'Grocery', 'Liquor store', 'Health and Personal Care', 'Apparel', 'Accessoires', 'Sporting goods', 'Toys', 'hobby', 'Books', 'Gifts and memorabillia', 'General merchandise', 'Office supplies', 'postal supplies and services', 'Gallery', 'Restaurant & bar', 'Personal services', 'Gym', 'Medical Services', 'Bank' , 'Laundry', 'dry cleaning', 'Other services'], :selected => record.retail_type %>
+        </div>
+
+        <div class="field">
+          <%= form.label :retail_sub_type %>
+          <%= form.select :retail_sub_type, ['', 'Automotive dealership', 'Automotive service',  'Automotive parts',  'Home décor',  'Kitchen & party supplies',  'Computer', 'cellular & other', 'hardware', 'Games & software', 'Movies & music', 'Household appliances', 'Electronics', 'department store', 'Furniture', 'Hardware',  'Garden center/florist', 'Pet related', 'Supermarket', 'Big box', 'Wholesale', 'Deli', 'convenience store', 'Butcher', 'bakery', 'seafood', 'cheese', 'chocolate', 'tea & coffee', 'other specialized food', 'Liquor store',  'Cosmetics & beauty supply', 'Optical', 'Drugstore', 'Pharmacy',  'Clothing', 'Leather and luggage', 'Shoes', 'Jewelry', 'Watches', 'Sporting apparel', 'Sporting equipment', 'Bikes', 'Toys', 'Hobby', 'Book stores', 'Gift shop', 'memorabillia and souveniers', 'Department stores', 'Discout', 'dollar stores', 'Office supplies', 'Postal supplies and services', 'Art Auctioneer', 'Restaurant',  'Bar', 'lounge', 'club', 'Café', 'Fast Food', 'Take-out', 'Spa', 'Hairstudio', 'barber', 'Nailstudio', 'Gym', 'Doctors', 'emergency care', 'Bank', 'Laundry', 'dry cleaning', 'Other services'], :selected => record.retail_sub_type %>
+        </div>
+
+        <div class="field">
+          <%= form.label :retailer_footprint %>
+          <%= form.select :retailer_footprint, ['', 'Local Chain / Independant', 'Regional Presence', 'National Presence', 'International Presence'], :selected => record.retailer_footprint %>
+        </div>
+
+        <div class="field">
+          <%= form.label :retail_price_point %>
+          <%= form.select :retail_price_point, ['', '$', '$$', '$$$', '$$$$'], :selected => record.retail_price_point %>
+        </div>
+
+        <div class="field">
+          <%= form.label :retailer_heritage %>
+          <%= form.select :retailer_heritage, ['','European', 'Asian', 'South American', 'North American', 'African', 'Australian', 'Middle Eastern'], :selected => record.retailer_heritage %>
+        </div>
+
+        <div class="field">
+          <%= form.label :retailer_value %>
+          <%= form.select :retailer_value, ['','Alternative', 'Trendy', 'Youth Child', 'Infant', 'Senior', 'Value Designer', 'Organic / Veggie',  'Touristy', 'Traditional', 'Concept store', 'Mens', 'Womens'], :selected => record.retailer_value %>
+        </div>
+
+        <div class="field">
+          <%= form.label :retailer_occurence %>
+          <%= form.select :retailer_occurence, ['','single location', 'multiple locations'], :selected => record.retailer_occurence %>
+        </div>
+
+        <div class="field">
+          <%= form.label :location_quality %>
+          <%= form.select :location_quality, ['','1 - Low End', '2 - Average', '3 - High Quality'], :selected => record.location_quality %>
+        </div>
+
+        <div class="field">
+          <%= form.label :premise_quality %>
+          <%= form.select :premise_quality, ['','1 - Low End', '2 - Average', '3 - High Quality'], :selected => record.premise_quality %>
+        </div>
+
+        <div class="field">
+          <%= form.label :quality_ranking %>
+           <%= form.select :quality_ranking, ['','1', '2', '3', '4', '5', '6'], :selected => record.quality_ranking %>
+        </div>
+
+        <div class="field">
+          <%= form.label :class_mix %>
+          <%= form.select :class_mix, ['','Tertiary', 'Average', 'Good', 'Prime'], :selected => record.class_mix %>
+        </div>
+
+        <div class="field">
+          <%= form.label :corner_store %>
+          <%= form.select :corner_store, ['','yes', 'no'], :selected => record.corner_store %>
+        </div>
+
+        <div class="field">
+          <%= form.label :percent_of_bldg_retail %>
+          <%= form.number_field :percent_of_bldg_retail, id: :premise_percent_of_bldg_retail, :value => record.percent_of_bldg_retail %>
+        </div>
+
+        <div class="field">
+          <%= form.label :premise_type %>
+          <%= form.select :premise_type, ['','street frontage', 'interior'], :selected => record.premise_type %>
+        </div>
+
+        <div class="field">
+          <%= form.label :basement_sf %>
+          <%= form.number_field :basement_sf, id: :premise_basement_sf, :value => record.basement_sf %>
+        </div>
+
+        <div class="field">
+          <%= form.label :ground_fl_sf %>
+          <%= form.number_field :ground_fl_sf, id: :premise_ground_fl_sf, :value => record.ground_fl_sf %>
+        </div>
+
+        <div class="field">
+          <%= form.label :mezzazine %>
+          <%= form.number_field :mezzazine, id: :premise_mezzazine, :value => record.mezzazine %>
+        </div>
+
+        <div class="field">
+          <%= form.label :upper_fl_sf %>
+          <%= form.number_field :upper_fl_sf, id: :premise_upper_fl_sf, :value => record.upper_fl_sf %>
+        </div>
+
+        <div class="field">
+          <%= form.label :step_up_or_down %>
+          <%= form.select :step_up_or_down, ['', 'step up', 'step down', 'none'], :selected => record.step_up_or_down %>
+        </div>
+
+        <div class="field">
+          <%= form.label :number_of_retail_stories %>
+          <%= form.number_field :number_of_retail_stories, id: :premise_number_of_retail_stories, :value => record.number_of_retail_stories %>
+        </div>
+
+        <div class="field">
+          <%= form.label :street_frontage %>
+          <%= form.number_field :street_frontage, id: :premise_street_frontage, :value => record.street_frontage %>
+        </div>
+
+        <div class="field">
+          <%= form.label :approx_retail_sf %>
+          <%= form.number_field :approx_retail_sf, id: :premise_approx_retail_sf, :value => record.approx_retail_sf %>
+        </div>
+
+        <div class="field">
+          <%= form.label :street_frontage_ratio %>
+          <%= form.number_field :street_frontage_ratio, id: :premise_street_frontage_ratio, :value => record.street_frontage_ratio %>
+        </div>
+
+        <div class="field">
+          <%= form.label :ceiling %>
+          <%= form.select :step_up_or_down, ['', 'high', 'standard', 'low'], :selected => record.ceiling %>
+        </div>
+
+        <div class="field">
+          <%= form.label :contains_retail %>
+          <%= form.select :contains_retail, ['', 'yes', 'no'], :selected => record.contains_retail %>
+        </div>
+
+        <div class="field">
+          <%= form.label :submarket %>
+          <%= form.select :contains_retail, ['','TriBeCa','Washington Heights','Fort George','Midtown South','Upper East Side','Midtown','SoHo','Financial District','East Village','Chelsea','Harlem','Clinton','Garment District','Midtown East','Union Square','Murray Hill','Kips Bay','Flatiron District','Theatre District - Times Square','Hudson Square','Upper West Side','Morningside Heights','Korea Town','West Village','Midtown West','Hudson Yards','Hells Kitchen','Port Authority','NoHo','Stuyvesant Town','Gramercy Park','Two Bridges','Civic Center','Peter Cooper Village','Little Italy','Chinatown','Lower East Side','Battery Park City','Harlem East'], :selected => record.submarket %>
+        </div>
+
+        <div class="field">
+          <%= form.label :total_number_of_retail_space %>
+          <%= form.number_field :total_number_of_retail_space, id: :premise_total_number_of_retail_space, :value => record.total_number_of_retail_space %>
+        </div>
+
+        <div class="field">
+          <%= form.label :total_retail_space %>
+          <%= form.number_field :total_retail_space, id: :premise_total_retail_space, :value => record.total_retail_space %>
+        </div>
+
+        <div class="field">
+          <%= form.label :zip_code %>
+          <%= form.text_field :zip_code, id: :premise_zip_code, :value => record.zip_code %>
+        </div>
+
+        <div class="field">
+          <%= form.label :xcord %>
+          <%= form.text_field :xcord, id: :premise_xcord, :value => record.xcord %>
+        </div>
+
+        <div class="field">
+          <%= form.label :ycord %>
+          <%= form.text_field :ycord, id: :premise_ycord, :value => record.ycord %>
+        </div>
+
+        <div class="field">
+          <%= form.label :building_status %>
+          <%= form.select :building_status, ['', 'existing', 'under construction'], :selected => record.building_status %>
+        </div>
+
+        <div class="field">
+          <%= form.label :borocode %>
+          <%= form.select :borocode, ['', '1', '2', '3', '4'], :selected => record.borocode %>
+        </div>
+
+        <div class="field">
+          <%= form.label :borough %>
+          <%= form.select :borough, ['', 'Manhattan', 'Brooklyn', 'Queens', 'Bronx'], :selected => record.borough %>
+        </div>
+
+        <div class="field">
+          <%= form.label :bbl %>
+          <%= form.text_field :bbl, id: :premise_bbl, :value => record.bbl %>
+        </div>
+
+        <div class="field">
+          <%= form.label :block %>
+          <%= form.number_field :block, id: :premise_block, :value => record.block %>
+        </div>
+
+        <div class="field">
+          <%= form.label :lot %>
+          <%= form.number_field :lot, id: :premise_lot, :value => record.lot %>
+        </div>
+
+        <div class="field">
+          <%= form.label :frequency_of_demand %>
+          <%= form.text_field :frequency_of_demand, id: :premise_frequency_of_demand, :value => record.frequency_of_demand %>
+        </div>
+
+        <div class="field">
+          <%= form.label :location_appearance %>
+          <%= form.text_field :location_appearance, id: :premise_location_appearance, :value => record.location_appearance %>
+        </div>
+
+        <div class="field">
+          <%= form.label :walkability_score %>
+          <%= form.text_field :walkability_score, id: :premise_walkability_score, :value => record.walkability_score %>
+        </div>
+
+        <div class="field">
+          <%= form.label :viability_score %>
+          <%= form.text_field :viability_score, id: :premise_viability_score, :value => record.viability_score %>
+        </div>
+
+        <div class="field">
+          <%= form.label :demographic %>
+          <%= form.text_field :demographic, id: :premise_demographic, :value => record.demographic %>
+        </div>
+
+        <div class="field">
+          <%= form.label :zip_code_from %>
+          <%= form.text_field :zip_code_from, id: :premise_zip_code_from, :value => record.zip_code_from %>
+        </div>
+
+        <div class="field">
+          <%= form.label :zip_code_to %>
+          <%= form.text_field :zip_code_to, id: :premise_zip_code_to, :value => record.zip_code_to %>
+        </div>
+
+        <div class="field">
+          <%= form.label :submarket_health_index %>
+          <%= form.text_field :submarket_health_index, id: :premise_submarket_health_index, :value => record.submarket_health_index %>
+        </div>
+
+        <div class="field">
+          <%= form.label :gentrifcation_score %>
+          <%= form.text_field :gentrifcation_score, id: :premise_gentrifcation_score, :value => record.gentrifcation_score %>
+        </div>
+
+        <div class="field">
+          <%= form.label :footfall_index %>
+          <%= form.text_field :footfall_index, id: :premise_footfall_index, :value => record.footfall_index %>
+        </div>
+
+        <div class="field">
+          <%= form.label :block_appeal %>
+          <%= form.text_field :block_appeal, id: :premise_block_appeal, :value => record.block_appeal %>
+        </div>
+
+        <div class="field">
+          <%= form.label :target_shopper_profile %>
+          <%= form.text_field :target_shopper_profile, id: :premise_target_shopper_profile, :value => record.target_shopper_profile %>
+        </div>
+
+        <div class="field">
+          <%= form.label :stability_index %>
+          <%= form.text_field :stability_index, id: :premise_stability_index, :value => record.stability_index %>
+        </div>
+
+        <div class="field">
+          <%= form.label :growth_index %>
+          <%= form.text_field :growth_index, id: :premise_growth_index, :value => record.growth_index %>
+        </div>
+
+        <div class="field">
+          <%= form.label :retailer_viability %>
+          <%= form.text_field :retailer_viability, id: :premise_retailer_viability, :value => record.retailer_viability %>
+        </div>
+
+        <div class="field">
+          <%= form.label :venting %>
+          <%= form.text_field :venting, id: :premise_venting, :value => record.venting %>
+        </div>
+
+        <div class="field">
+          <%= form.label :social_media %>
+          <%= form.text_field :social_media, id: :premise_social_media, :value => record.social_media %>
+        </div>
+
+        <div class="field">
+          <%= form.label :total_bldg_front %>
+          <%= form.number_field :total_bldg_front, id: :premise_total_bldg_front, :value => record.total_bldg_front %>
+        </div>
+
+        <div class="field">
+          <%= form.label :active %>
+          <%= form.check_box :active, id: :premise_active, :value => record.active %>
+        </div>
+
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
 <% end %>

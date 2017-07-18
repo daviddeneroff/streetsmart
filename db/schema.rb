@@ -76,6 +76,9 @@ ActiveRecord::Schema.define(version: 20170620024128) do
     t.string "social_media"
     t.integer "total_bldg_front"
     t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "notes"
   end
 
 end

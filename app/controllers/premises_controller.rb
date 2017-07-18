@@ -23,13 +23,15 @@ class PremisesController < ApplicationController
 
   # GET /premises/new
   def new
-    @oldRecord = Premise.where(id: params["format"])
+    if Premise.where(id: params["format"]).count > 0
+      @oldRecord = Premise.where(id: params["format"])  
+    end
     @premise = Premise.new
   end
 
   # GET /premises/1/edit
   def edit
-  end
+  end 
 
   # POST /premises
   # POST /premises.json
@@ -79,6 +81,6 @@ class PremisesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def premise_params
-      params.require(:premise).permit(:building_address, :tenant_name, :occupancy_status, :availability_status, :retail_type, :retail_sub_type, :retailer_footprint, :retail_price_point, :retailer_heritage, :retailer_value, :retailer_occurence, :location_quality, :premise_quality, :quality_ranking, :class_mix, :corner_store, :percent_of_bldg_retail, :premise_type, :basement_sf, :ground_fl_sf, :mezzazine, :upper_fl_sf, :step_up_or_down, :number_of_retail_stories, :street_frontage, :approx_retail_sf, :street_frontage_ratio, :ceiling, :contains_retail, :submarket, :total_number_of_retail_space, :total_retail_space, :zip_code, :xcord, :ycord, :building_status, :borocode, :borough, :bbl, :block, :lot, :frequency_of_demand, :location_appearance, :walkability_score, :viability_score, :demographic, :zip_code_from, :zip_code_to, :submarket_health_index, :gentrifcation_score, :footfall_index, :block_appeal, :target_shopper_profile, :stability_index, :growth_index, :retailer_viability, :venting, :social_media, :total_bldg_front, :active)
+      params.require(:premise).permit(:building_address, :tenant_name, :occupancy_status, :availability_status, :retail_type, :retail_sub_type, :retailer_footprint, :retail_price_point, :retailer_heritage, :retailer_value, :retailer_occurence, :location_quality, :premise_quality, :quality_ranking, :class_mix, :corner_store, :percent_of_bldg_retail, :premise_type, :basement_sf, :ground_fl_sf, :mezzazine, :upper_fl_sf, :step_up_or_down, :number_of_retail_stories, :street_frontage, :approx_retail_sf, :street_frontage_ratio, :ceiling, :contains_retail, :submarket, :total_number_of_retail_space, :total_retail_space, :zip_code, :xcord, :ycord, :building_status, :borocode, :borough, :bbl, :block, :lot, :frequency_of_demand, :location_appearance, :walkability_score, :viability_score, :demographic, :zip_code_from, :zip_code_to, :submarket_health_index, :gentrifcation_score, :footfall_index, :block_appeal, :target_shopper_profile, :stability_index, :growth_index, :retailer_viability, :venting, :social_media, :total_bldg_front, :active, :notes)
     end
 end

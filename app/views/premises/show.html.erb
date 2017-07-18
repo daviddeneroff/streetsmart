@@ -303,5 +303,20 @@
   <%= @premise.active %>
 </p>
 
+<p>
+  <strong>created_at:</strong>
+  <%= @premise.created_at %>
+</p>
+
+<p>
+  <strong>updated_at:</strong>
+  <%= @premise.updated_at %>
+</p>
+
+<p>
+  <strong>notes:</strong>
+  <%= @premise.notes %>
+</p>
+
 <%= link_to 'Edit', edit_premise_path(@premise) %> |
 <%= link_to 'Back', premises_path %>

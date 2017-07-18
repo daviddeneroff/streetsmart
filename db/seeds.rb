@@ -7,7 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'csv'
 
-csv_text = File.read(Rails.root.join('lib', 'seeds', 'bleeker-sample.csv'))
+# csv_text = File.read(Rails.root.join('lib', 'seeds', 'bleeker-sample.csv'))
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'bleeker-sample-new-structure.csv'))
 puts csv_text
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 
@@ -73,6 +74,9 @@ csv.each do |row|
   t.social_media = row['social_media']
   t.total_bldg_front = row['total_bldg_front']
   t.active = row['active']
+  t.created_at = row['created_at']
+  t.updated_at = row['updated_at']
+  t.notes = row['notes']
 
   t.save
 

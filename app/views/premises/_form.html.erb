@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <% if @oldRecord.count == 0 %>
+  <% if !@oldRecord %>
     <div class="form-container">
       <div class="field">
         <%= form.label :building_address %>
@@ -312,6 +312,13 @@
       <div class="field">
         <%= form.label :active %>
         <%= form.check_box :active, id: :premise_active %>
+      </div>
+      
+      dCreated at, Updated at are updated automatically
+
+      <div class="field">
+        <%= form.label :notes %>
+        <%= form.text_field :notes, id: :premise_notes %>
       </div>
 
       <div class="actions">
@@ -619,6 +626,13 @@
         <div class="field">
           <%= form.label :active %>
           <%= form.check_box :active, id: :premise_active, :value => record.active %>
+        </div>
+
+        Created at, Updated at are updated automatically
+
+        <div class="field">
+          <%= form.label :notes %>
+          <%= form.text_field :notes, id: :premise_notes %>
         </div>
 
         <div class="actions">

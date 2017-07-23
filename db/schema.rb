@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170722180207) do
+ActiveRecord::Schema.define(version: 20170723131104) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20170722180207) do
     t.string "retail_type"
     t.string "retail_sub_type"
     t.string "retailer_footprint"
-    t.integer "retail_price_point"
+    t.string "retail_price_point"
     t.string "retailer_heritage"
     t.string "retailer_value"
     t.string "retailer_occurence"
@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 20170722180207) do
     t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "notes"
+    t.text "notes"
     t.string "mailer_building_number"
     t.string "mailer_street"
     t.string "mailer_street_type"

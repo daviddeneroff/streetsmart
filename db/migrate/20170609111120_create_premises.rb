@@ -8,7 +8,7 @@ class CreatePremises < ActiveRecord::Migration[5.1]
       t.string :retail_type
       t.string :retail_sub_type
       t.string :retailer_footprint
-      t.integer :retail_price_point
+      t.string :retail_price_point
       t.string :retailer_heritage
       t.string :retailer_value
       t.string :retailer_occurence

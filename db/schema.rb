@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170620024128) do
+ActiveRecord::Schema.define(version: 20170722180207) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,6 +79,32 @@ ActiveRecord::Schema.define(version: 20170620024128) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "notes"
+    t.string "mailer_building_number"
+    t.string "mailer_street"
+    t.string "mailer_street_type"
+    t.string "mailer_city"
+    t.string "mailer_state"
+    t.string "mailer_zip_code"
+    t.integer "location_quality_grade"
+    t.integer "premise_quality_grade"
+    t.string "listing_brokerage"
+    t.string "listing_broker_name"
+    t.string "listing_broker_email"
+    t.string "listing_broker_number"
+    t.string "tenant_contact_name"
+    t.string "tenant_contact_phone_number"
+    t.string "tenant_contact_email"
+    t.string "tenant_contact_address"
+    t.string "owner_contact_name"
+    t.string "owner_contact_phone_number"
+    t.string "owner_contact_email"
+    t.string "owner_contact_address"
+    t.string "unique_id_addedem"
+    t.string "unique_id_complete"
+    t.string "corridor"
+    t.string "lattitude"
+    t.string "longitude"
+    t.string "previous_tenant"
   end
 
 end

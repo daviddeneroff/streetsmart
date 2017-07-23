@@ -8,7 +8,7 @@
 require 'csv'
 
 # csv_text = File.read(Rails.root.join('lib', 'seeds', 'bleeker-sample.csv'))
-csv_text = File.read(Rails.root.join('lib', 'seeds', 'bleeker-sample-new-structure.csv'))
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'west-village.csv'))
 puts csv_text
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 
@@ -76,6 +76,32 @@ csv.each do |row|
   t.active = row['active']
   t.created_at = row['created_at']
   t.updated_at = row['updated_at']
+  t.mailer_building_number = row['mailer_building_number']
+  t.mailer_street = row['mailer_street']
+  t.mailer_street_type = row['mailer_street_type']
+  t.mailer_city = row['mailer_city']
+  t.mailer_state = row['mailer_state']
+  t.mailer_zip_code = row['mailer_zip_code']
+  t.location_quality_grade = row['location_quality_grade']
+  t.premise_quality_grade = row['premise_quality-grade']
+  t.listing_brokerage = row['listing_brokerage']
+  t.listing_broker_name = row['listing_broker_name']
+  t.listing_broker_email = row['listing_broker_email']
+  t.listing_broker_number = row['listing_broker_number']
+  t.tenant_contact_name = row['tenant_contact_name']
+  t.tenant_contact_phone_number = row['tenant_contact_phone_number']
+  t.tenant_contact_email = row['tenant_contact_email']
+  t.tenant_contact_address = row['tenant_contact_address']
+  t.owner_contact_name = row['owner_contact_name']
+  t.owner_contact_phone_number = row['owner_contact_phone_number']
+  t.owner_contact_email = row['owner_contact_email']
+  t.owner_contact_address = row['owner_contact_address']
+  t.unique_id_addedem = row['unique_id_addedem']
+  t.unique_id_complete = row['unique_id_complete']
+  t.corridor = row['corridor']
+  t.lattitude = row['lattitude']
+  t.longitude = row['longitude']
+  t.previous_tenant = row['previous_tenant']
   t.notes = row['notes']
 
   t.save

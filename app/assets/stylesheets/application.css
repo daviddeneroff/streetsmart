@@ -21,3 +21,11 @@
 th {
   text-align: left;
 }
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}

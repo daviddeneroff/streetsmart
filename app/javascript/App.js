@@ -10,7 +10,8 @@ $(document).ready(function () {
     });
   });
 
-  $('.reset-search').click(function () {
+  $('.reset-search').click(function (e) {
+    e.preventDefault();
     $('tbody tr').removeClass('hidden');
   })
 });

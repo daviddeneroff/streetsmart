@@ -36,6 +36,10 @@ th {
   text-align: left;
 }
 
+.nomargin {
+  margin: 0;
+}
+
 .logo {
   display: block;
   text-align: center;

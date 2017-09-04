@@ -1,15 +1,4 @@
 $(document).ready(function () {
-  // $('#search-bbl').click(function (e) {
-  //   var inputVal = $('#input').val();
-  //   $('tbody tr').addClass('hidden');
-
-  //   $.each( $('tbody tr'), function( key, value ) {
-  //     if ($(this).data('bbl') == inputVal) {
-  //       $(this).removeClass('hidden');
-  //     }
-  //   });
-  // });
-
   $('.filters .apply-filters').on('click', function (e) {
     e.preventDefault();
     $('tbody tr').removeClass('hidden');
@@ -29,12 +18,11 @@ $(document).ready(function () {
         activeArr.push(value)
       }
     });
-    console.log('activeArr: ' + activeArr)
 
     $.each( $('tbody tr'), function( key, value ) {
       var self = this;
       for (var i = 0; i < activeArr.length; i++) {
-        if (!($(self).data(activeArr[i]) == $('#' + activeArr[i]).val())) {
+        if (!($(self).data(activeArr[i]).toLowerCase() == $('#' + activeArr[i]).val().toLowerCase())) {
           $(self).addClass('hidden');
         }
       };

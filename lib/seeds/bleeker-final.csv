@@ -3,16 +3,17 @@ x 1. mailer street type answer
 x 2. confirm final fields
 x 3. confirm order of fields in csv
 x 4. run migration command
-  5. update retail price point to string, no integer
+x 5. update retail price point to string, no integer
 x 6. copy csv data to bleeker
 x 7. update seed file csv reference
 x 8. update / check schema
 x 9. add fields to seed file
 x 10. add fields to csv and xlxs download
 x 11. add fields to controller
-  12. add fields to show / edit / create from base / any visible page
-  13. verify all functionality on local
-  14. push live
+x 12. add fields to show / edit / create from base / any visible page
+x 13. verify all functionality on local
+  14. long / lat field change
+x 15. push live
 
   later
   1. js for commas in notes field

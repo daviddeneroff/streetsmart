@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
   $('.filters .apply-filters').on('click', function (e) {
     e.preventDefault();
@@ -34,3 +35,72 @@ $(document).ready(function () {
     $('tbody tr').removeClass('hidden');
   })
 });
+
+
+
+// var markers = [];
+
+// function initMap() {
+//   var manhattan = {lat: 40.7831, lng: -73.9712, info: "riva"};
+//   map = new google.maps.Map(document.getElementById('map'), {
+//     zoom: 15,
+//     center: manhattan
+//   });
+//   // addMarker(manhattan);
+// }
+
+// function addMarker(location) {
+//   var marker = new google.maps.Marker({
+//     position: location,
+//     map: map
+//   });
+//   markers.push(marker);
+//   var content = "Location Info or nada: " + (location.info || "");
+//   var infowindow = new google.maps.InfoWindow()
+
+//   google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
+//     return function() {
+//        infowindow.setContent(content);
+//        infowindow.open(map,marker);
+//     };
+//   })(marker,content,infowindow));
+// }
+
+// function setMapOnAll(map) {
+//   for (var i = 0; i < markers.length; i++) {
+//     markers[i].setMap(map);
+//   }
+// }
+
+// function clearMarkers() {
+//   setMapOnAll(null);
+// }
+
+// function showMarkers() {
+//   setMapOnAll(map);
+// }
+
+// function deleteMarkers() {
+//   clearMarkers();
+//   markers = [];
+// }
+
+// function addInfoWindows(marker) {
+// }
+
+
+// $(document).ready(function () {
+//   var activeLocations = [];
+//   // apply filters event
+//   $('.standin').on('click', function (e) {
+//     // create array of results from filters
+//     var nyc = {lat: 40.7831, lng: -73.9712, info: 'sahhhh'};
+//     // iterate, then add marker for each
+//     addMarker(nyc);
+//   });
+
+//   $('.section .title').on('click', function (e) {
+//     $target = $(e.currentTarget);
+//     $target.parent().toggleClass('active');
+//   });
+// });

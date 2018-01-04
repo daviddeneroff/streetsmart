@@ -8,7 +8,7 @@
 require 'csv'
 
 # csv_text = File.read(Rails.root.join('lib', 'seeds', 'bleeker-sample.csv'))
-csv_text = File.read(Rails.root.join('lib', 'seeds', 'west-village.csv'))
+csv_text = File.read(Rails.root.join('lib', 'seeds', '01042018.csv'))
 puts csv_text
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 

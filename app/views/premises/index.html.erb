@@ -315,7 +315,7 @@
 <%= link_to 'New Premise', new_premise_path %>
 
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAADVix6bYym_nE2VqzVNcxnrGpjIpIaEs&libraries=geometry&sensor=false">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAADVix6bYym_nE2VqzVNcxnrGpjIpIaEs&libraries=geometry">
 </script>
 <script>
 const personData = [];
@@ -323,21 +323,21 @@ var premiseArray = <%= raw Premise.limit(2000).to_json %>;
 var i;
 for (var i = premiseArray.length - 1; i >= 0; i--) {
   personData.push({
-    "id": premiseArray[i].id,
     "name": premiseArray[i].tenant_name,
-    "age": premiseArray[i].borough,
-    "followers": premiseArray[i].ceiling,
-    "occupation": premiseArray[i].availability_status,
-    "from": premiseArray[i].corner_store,
-    "college": premiseArray[i].frequency_of_demand,
-    "lat": premiseArray[i].longitude,
-    "lng": premiseArray[i].lattitude,
+    "lat": parseFloat(premiseArray[i].lattitude),
+    "lng": parseFloat(premiseArray[i].longitude)
+    // "id": premiseArray[i].id,
+    // "age": premiseArray[i].borough,
+    // "followers": premiseArray[i].ceiling,
+    // "occupation": premiseArray[i].availability_status,
+    // "from": premiseArray[i].corner_store,
+    // "college": premiseArray[i].frequency_of_demand,
   })
 }
   var myMap = function() {
 
   var options = {
-    zoom: 13,
+    zoom: 12,
     center: new google.maps.LatLng(40.783,-73.9712),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   }
@@ -349,7 +349,7 @@ for (var i = premiseArray.length - 1; i >= 0; i--) {
   */
   function init(settings) {
     map = new google.maps.Map(document.getElementById( settings.idSelector ), options);
-    markerLocation = settings.markerLocation;
+    // markerLocation = settings.markerLocation;
     loadMarkers();
   }
 
@@ -366,18 +366,17 @@ for (var i = premiseArray.length - 1; i >= 0; i--) {
     @param array personList [optional] (list of people to load)
     @return undefined
   */
-  function loadMarkers(personList) {
-
+  function loadMarkers() {
     // optional argument of person
-    var people = ( typeof personList !== 'undefined' ) ? personList : personData;
+    var people = personData;
 
     // var j = 1; // for lorempixel
-
     for( i=0; i < people.length; i++ ) {
       var person = people[i];
 
       // if its already on the map, dont put it there again
-      if( markerList.indexOf(person.id) !== -1 ) continue;
+      // put back / modify
+      // if( markerList.indexOf(person.id) !== -1 ) continue;
 
       var lat = person.lat,
         lng = person.lng,
@@ -387,11 +386,13 @@ for (var i = premiseArray.length - 1; i >= 0; i--) {
         maxWidth: 400
       });
 
+        // new google.maps.LatLng( lat, lng ),
+        // title: person.name,
+        // markerId: markerId,
+        // icon: markerLocation,
+      var myLatLng = {lat: lat, lng: lng};
       var marker = new google.maps.Marker({
-        position: new google.maps.LatLng( lat, lng ),
-        title: person.name,
-        markerId: markerId,
-        icon: markerLocation,
+        position: myLatLng,
         map: map
       });
 

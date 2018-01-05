@@ -76,6 +76,7 @@ csv.each do |row|
   t.active = row['active']
   t.created_at = row['created_at']
   t.updated_at = row['updated_at']
+  t.notes = row['notes']
   t.mailer_building_number = row['mailer_building_number']
   t.mailer_street = row['mailer_street']
   t.mailer_street_type = row['mailer_street_type']
@@ -83,7 +84,7 @@ csv.each do |row|
   t.mailer_state = row['mailer_state']
   t.mailer_zip_code = row['mailer_zip_code']
   t.location_quality_grade = row['location_quality_grade']
-  t.premise_quality_grade = row['premise_quality-grade']
+  t.premise_quality_grade = row['premise_quality_grade']
   t.listing_brokerage = row['listing_brokerage']
   t.listing_broker_name = row['listing_broker_name']
   t.listing_broker_email = row['listing_broker_email']
@@ -102,7 +103,6 @@ csv.each do |row|
   t.lattitude = row['lattitude']
   t.longitude = row['longitude']
   t.previous_tenant = row['previous_tenant']
-  t.notes = row['notes']
 
   t.save
 

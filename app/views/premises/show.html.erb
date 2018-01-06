@@ -1,352 +1,458 @@
 <p id="notice"><%= notice %></p>
-<div class="wrapper">
-  
-  <div class="listing-options">
-    <p class="option"><%= link_to 'Show Previous', @previousPremise %></p>
-    <p class="option"><%= link_to 'Show Next', @nextPremise %></p>
-    <p class="option"><%= link_to 'Update', edit_premise_path(@premise) %></p>
-    <p class="option"><%= link_to 'Create from this base', new_premise_path(@premise.id) %></p>
-  </div>
 
-  <div class="section underline">
-    <p>
-      <strong class="hidden">Building address:</strong>
-      <%= @premise.building_address %>
-    </p>
+<p><%= link_to 'Show Previous', @previousPremise %></p>
+<p><%= link_to 'Show Next', @nextPremise %></p>
+<p><%= link_to 'Update', edit_premise_path(@premise) %></p>
+<%= link_to 'Create from this base', new_premise_path(@premise.id) %>
 
-    <p>
-      <strong class="hidden">Tenant name:</strong>
-      <%= @premise.tenant_name %>
-    </p>
-  </div>
+<p>
+  <strong>Building address:</strong>
+  <%= @premise.building_address %>
+</p>
 
-  <div class="section">
-    <div class="row">
-      <p>
-        <strong>Occupancy status:</strong>
-        <%= @premise.occupancy_status %>
-      </p>
-      
-      <p>
-        <strong>Availability status:</strong>
-        <%= @premise.availability_status %>
-      </p>
+<p>
+  <strong>Tenant name:</strong>
+  <%= @premise.tenant_name %>
+</p>
 
-      <p>
-        <strong>previous_tenant:</strong>
-        <%= @premise.previous_tenant %>
-      </p>
+<p>
+  <strong>Occupancy status:</strong>
+  <%= @premise.occupancy_status %>
+</p>
 
-      <p>
-        <strong>notes:</strong>
-        <%= @premise.notes %>
-      </p>
-    </div>
-    <div class="row">
-      <p>
-        <strong>Retail type:</strong>
-        <%= @premise.retail_type %>
-      </p>
+<p>
+  <strong>Availability status:</strong>
+  <%= @premise.availability_status %>
+</p>
 
-      <p>
-        <strong>Retail sub type:</strong>
-        <%= @premise.retail_sub_type %>
-      </p>
-      <p>
-        <strong>Retail price point:</strong>
-        <%= @premise.retail_price_point %>
-      </p>
-      <p>
-        <strong>Retailer value:</strong>
-        <%= @premise.retailer_value %>
-      </p>
+<p>
+  <strong>Retail type:</strong>
+  <%= @premise.retail_type %>
+</p>
 
-      <p>
-        <strong>Retailer occurence:</strong>
-        <%= @premise.retailer_occurence %>
-      </p>
-    </div>
-    <div class="row">
-      <p>
-        <strong>Retailer footprint:</strong>
-        <%= @premise.retailer_footprint %>
-      </p>
+<p>
+  <strong>Retail sub type:</strong>
+  <%= @premise.retail_sub_type %>
+</p>
 
-      <p>
-        <strong>Retailer heritage:</strong>
-        <%= @premise.retailer_heritage %>
-      </p>
+<p>
+  <strong>Retailer footprint:</strong>
+  <%= @premise.retailer_footprint %>
+</p>
 
-      <p>
-        <strong>unique_id_addedem:</strong>
-        <%= @premise.unique_id_addedem %>
-      </p>
+<p>
+  <strong>Retail price point:</strong>
+  <%= @premise.retail_price_point %>
+</p>
 
-      <p>
-        <strong>unique_id_complete:</strong>
-        <%= @premise.unique_id_complete %>
-      </p>
+<p>
+  <strong>Retailer heritage:</strong>
+  <%= @premise.retailer_heritage %>
+</p>
 
-      <p>
-        <strong>Active:</strong>
-        <%= @premise.active %>
-      </p>
-    </div>
-  </div>
+<p>
+  <strong>Retailer value:</strong>
+  <%= @premise.retailer_value %>
+</p>
 
-  <h2>Premise Info</h2>
+<p>
+  <strong>Retailer occurence:</strong>
+  <%= @premise.retailer_occurence %>
+</p>
 
-  <div class="section">
-    <div class="row">
-      <p>
-        <strong>Approx retail sf:</strong>
-        <%= @premise.approx_retail_sf %>
-      </p>
+<p>
+  <strong>Location quality:</strong>
+  <%= @premise.location_quality %>
+</p>
 
-      <p>
-        <strong>Ground fl sf:</strong>
-        <%= @premise.ground_fl_sf %>
-      </p>
+<p>
+  <strong>Premise quality:</strong>
+  <%= @premise.premise_quality %>
+</p>
 
-      <p>
-        <strong>Basement sf:</strong>
-        <%= @premise.basement_sf %>
-      </p>
+<p>
+  <strong>Quality ranking:</strong>
+  <%= @premise.quality_ranking %>
+</p>
 
-      <p>
-        <strong>Mezzazine:</strong>
-        <%= @premise.mezzazine %>
-      </p>
+<p>
+  <strong>Class mix:</strong>
+  <%= @premise.class_mix %>
+</p>
 
-      <p>
-        <strong>Upper fl sf:</strong>
-        <%= @premise.upper_fl_sf %>
-      </p>
-    </div>
-    <div class="row">
-      <p>
-        <strong>Ceiling:</strong>
-        <%= @premise.ceiling %>
-      </p>
+<p>
+  <strong>Corner store:</strong>
+  <%= @premise.corner_store %>
+</p>
 
-      <p>
-        <strong>Step up or down:</strong>
-        <%= @premise.step_up_or_down %>
-      </p>
-      
-      <p>
-        <strong>Corner store:</strong>
-        <%= @premise.corner_store %>
-      </p>
+<p>
+  <strong>Percent of bldg retail:</strong>
+  <%= @premise.percent_of_bldg_retail %>
+</p>
 
-      <p>
-        <strong>Number of retail stories:</strong>
-        <%= @premise.number_of_retail_stories %>
-      </p>
+<p>
+  <strong>Premise type:</strong>
+  <%= @premise.premise_type %>
+</p>
 
-      <p>
-        <strong>Percent of bldg retail:</strong>
-        <%= @premise.percent_of_bldg_retail %>
-      </p>
+<p>
+  <strong>Basement sf:</strong>
+  <%= @premise.basement_sf %>
+</p>
 
-    </div>
-    <div class="row">
-      <p>
-        <strong>Premise quality:</strong>
-        <%= @premise.premise_quality %>
-      </p>
+<p>
+  <strong>Ground fl sf:</strong>
+  <%= @premise.ground_fl_sf %>
+</p>
 
-      <p>
-        <strong>Quality ranking:</strong>
-        <%= @premise.quality_ranking %>
-      </p>
+<p>
+  <strong>Mezzazine:</strong>
+  <%= @premise.mezzazine %>
+</p>
 
-      <p>
-        <strong>Class mix:</strong>
-        <%= @premise.class_mix %>
-      </p>
+<p>
+  <strong>Upper fl sf:</strong>
+  <%= @premise.upper_fl_sf %>
+</p>
 
-      <p>
-        <strong>Premise type:</strong>
-        <%= @premise.premise_type %>
-      </p>
+<p>
+  <strong>Step up or down:</strong>
+  <%= @premise.step_up_or_down %>
+</p>
 
-      <p>
-        <strong>Street frontage:</strong>
-        <%= @premise.street_frontage %>
-      </p>
-    </div>
-  </div>
+<p>
+  <strong>Number of retail stories:</strong>
+  <%= @premise.number_of_retail_stories %>
+</p>
 
-  <div class="section">
-    <div class="row">
-      <p>
-        <strong>Total retail space:</strong>
-        <%= @premise.total_retail_space %>
-      </p>
-      
-      <p>
-        <strong>Contains retail:</strong>
-        <%= @premise.contains_retail %>
-      </p>
-      
-      <p>
-        <strong>Total number of retail space:</strong>
-        <%= @premise.total_number_of_retail_space %>
-      </p>
+<p>
+  <strong>Street frontage:</strong>
+  <%= @premise.street_frontage %>
+</p>
 
-      <p>
-        <strong>Street frontage ratio:</strong>
-        <%= @premise.street_frontage_ratio %>
-      </p>
+<p>
+  <strong>Approx retail sf:</strong>
+  <%= @premise.approx_retail_sf %>
+</p>
 
-      <p>
-        <strong>lattitude:</strong>
-        <%= @premise.lattitude %>
-      </p>
+<p>
+  <strong>Street frontage ratio:</strong>
+  <%= @premise.street_frontage_ratio %>
+</p>
 
-      <p>
-        <strong>longitude:</strong>
-        <%= @premise.longitude %>
-      </p>
-    </div>
-    <div class="row">
-      <p>
-        <strong>Submarket:</strong>
-        <%= @premise.submarket %>
-      </p>
+<p>
+  <strong>Ceiling:</strong>
+  <%= @premise.ceiling %>
+</p>
 
-      <p>
-        <strong>Zip code:</strong>
-        <%= @premise.zip_code %>
-      </p>
+<p>
+  <strong>Contains retail:</strong>
+  <%= @premise.contains_retail %>
+</p>
 
-      <p>
-        <strong>Xcord:</strong>
-        <%= @premise.xcord %>
-      </p>
+<p>
+  <strong>Submarket:</strong>
+  <%= @premise.submarket %>
+</p>
 
-      <p>
-        <strong>Ycord:</strong>
-        <%= @premise.ycord %>
-      </p>
+<p>
+  <strong>Total number of retail space:</strong>
+  <%= @premise.total_number_of_retail_space %>
+</p>
 
-      <p>
-        <strong>Building status:</strong>
-        <%= @premise.building_status %>
-      </p>
+<p>
+  <strong>Total retail space:</strong>
+  <%= @premise.total_retail_space %>
+</p>
 
-      <p>
-        <strong>Total bldg front:</strong>
-        <%= @premise.total_bldg_front %>
-      </p>
-    </div>
-    <div class="row">
-      <p>
-        <strong>Bbl:</strong>
-        <%= @premise.bbl %>
-      </p>
+<p>
+  <strong>Zip code:</strong>
+  <%= @premise.zip_code %>
+</p>
 
-      <p>
-        <strong>Block:</strong>
-        <%= @premise.block %>
-      </p>
+<p>
+  <strong>Xcord:</strong>
+  <%= @premise.xcord %>
+</p>
 
-      <p>
-        <strong>Lot:</strong>
-        <%= @premise.lot %>
-      </p>
+<p>
+  <strong>Ycord:</strong>
+  <%= @premise.ycord %>
+</p>
 
-      <p>
-        <strong>Borocode:</strong>
-        <%= @premise.borocode %>
-      </p>
+<p>
+  <strong>Building status:</strong>
+  <%= @premise.building_status %>
+</p>
 
-      <p>
-        <strong>Borough:</strong>
-        <%= @premise.borough %>
-      </p>
+<p>
+  <strong>Borocode:</strong>
+  <%= @premise.borocode %>
+</p>
 
-      <p>
-        <strong>corridor:</strong>
-        <%= @premise.corridor %>
-      </p>
-    </div>
-  </div>
+<p>
+  <strong>Borough:</strong>
+  <%= @premise.borough %>
+</p>
 
-  <h2>Contact Info</h2>
+<p>
+  <strong>Bbl:</strong>
+  <%= @premise.bbl %>
+</p>
 
-  <div class="section">
-    <div class="row">
-      <p>
-        <strong>owner_contact_name:</strong>
-        <%= @premise.owner_contact_name %>
-      </p>
+<p>
+  <strong>Block:</strong>
+  <%= @premise.block %>
+</p>
 
-      <p>
-        <strong>owner_contact_phone_number</strong>
-        <%= @premise.owner_contact_phone_number %>
-      </p>
+<p>
+  <strong>Lot:</strong>
+  <%= @premise.lot %>
+</p>
 
-      <p>
-        <strong>owner_contact_email:</strong>
-        <%= @premise.owner_contact_email %>
-      </p>
+<p>
+  <strong>Frequency of demand:</strong>
+  <%= @premise.frequency_of_demand %>
+</p>
 
-      <p>
-        <strong>owner_contact_address:</strong>
-        <%= @premise.owner_contact_address %>
-      </p>
-      
-      <p>
-        <strong>mailer_building_number:</strong>
-        <%= @premise.mailer_building_number %>
-      </p>
+<p>
+  <strong>Location appearance:</strong>
+  <%= @premise.location_appearance %>
+</p>
 
-      <p>
-        <strong>mailer_street:</strong>
-        <%= @premise.mailer_street %>
-      </p>
+<p>
+  <strong>Walkability score:</strong>
+  <%= @premise.walkability_score %>
+</p>
 
-      <p>
-        <strong>mailer_street_type:</strong>
-        <%= @premise.mailer_street_type %>
-      </p>
+<p>
+  <strong>Viability score:</strong>
+  <%= @premise.viability_score %>
+</p>
 
-      <p>
-        <strong>mailer_city:</strong>
-        <%= @premise.mailer_city %>
-      </p>
+<p>
+  <strong>Demographic:</strong>
+  <%= @premise.demographic %>
+</p>
 
-      <p>
-        <strong>mailer_state:</strong>
-        <%= @premise.mailer_state %>
-      </p>
+<p>
+  <strong>Zip code from:</strong>
+  <%= @premise.zip_code_from %>
+</p>
 
-      <p>
-        <strong>mailer_zip_code:</strong>
-        <%= @premise.mailer_zip_code %>
-      </p>
-    </div>
-    <div class="row">
-      <p>
-        <strong>tenant_contact_name:</strong>
-        <%= @premise.tenant_contact_name %>
-      </p>
+<p>
+  <strong>Zip code to:</strong>
+  <%= @premise.zip_code_to %>
+</p>
 
-      <p>
-        <strong>tenant_contact_phone_number</strong>
-        <%= @premise.tenant_contact_phone_number %>
-      </p>
+<p>
+  <strong>Submarket health index:</strong>
+  <%= @premise.submarket_health_index %>
+</p>
 
-      <p>
-        <strong>tenant_contact_email:</strong>
-        <%= @premise.tenant_contact_email %>
-      </p>
+<p>
+  <strong>Gentrifcation score:</strong>
+  <%= @premise.gentrifcation_score %>
+</p>
 
-      <p>
-        <strong>tenant_contact_address:</strong>
-        <%= @premise.tenant_contact_address %>
+<p>
+  <strong>Footfall index:</strong>
+  <%= @premise.footfall_index %>
+</p>
+
+<p>
+  <strong>Block appeal:</strong>
+  <%= @premise.block_appeal %>
+</p>
+
+<p>
+  <strong>Target shopper profile:</strong>
+  <%= @premise.target_shopper_profile %>
+</p>
+
+<p>
+  <strong>Stability index:</strong>
+  <%= @premise.stability_index %>
+</p>
+
+<p>
+  <strong>Growth index:</strong>
+  <%= @premise.growth_index %>
+</p>
+
+<p>
+  <strong>Retailer viability:</strong>
+  <%= @premise.retailer_viability %>
+</p>
+
+<p>
+  <strong>Venting:</strong>
+  <%= @premise.venting %>
+</p>
+
+<p>
+  <strong>Social media:</strong>
+  <%= @premise.social_media %>
+</p>
+
+<p>
+  <strong>Total bldg front:</strong>
+  <%= @premise.total_bldg_front %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @premise.active %>
+</p>
+
+<p>
+  <strong>created_at:</strong>
+  <%= @premise.created_at %>
+</p>
+
+<p>
+  <strong>updated_at:</strong>
+  <%= @premise.updated_at %>
+</p>
+
+<p>
+  <strong>mailer_building_number:</strong>
+  <%= @premise.mailer_building_number %>
+</p>
+
+<p>
+  <strong>mailer_street:</strong>
+  <%= @premise.mailer_street %>
+</p>
+
+<p>
+  <strong>mailer_street_type:</strong>
+  <%= @premise.mailer_street_type %>
+</p>
+
+<p>
+  <strong>mailer_city:</strong>
+  <%= @premise.mailer_city %>
+</p>
+
+<p>
+  <strong>mailer_state:</strong>
+  <%= @premise.mailer_state %>
+</p>
+
+<p>
+  <strong>mailer_zip_code:</strong>
+  <%= @premise.mailer_zip_code %>
+</p>
+
+<p>
+  <strong>location_quality_grade:</strong>
+  <%= @premise.location_quality_grade %>
+</p>
+
+<p>
+  <strong>premise_quality_grade:</strong>
+  <%= @premise.premise_quality_grade %>
+</p>
+
+<p>
+  <strong>listing_brokerage:</strong>
+  <%= @premise.listing_brokerage %>
+</p>
+
+<p>
+  <strong>listing_broker_name:</strong>
+  <%= @premise.listing_broker_name %>
+</p>
+
+<p>
+  <strong>listing_broker_email:</strong>
+  <%= @premise.listing_broker_email %>
+</p>
+
+<p>
+  <strong>listing_broker_number:</strong>
+  <%= @premise.listing_broker_number %>
+</p>
+
+<p>
+  <strong>tenant_contact_name:</strong>
+  <%= @premise.tenant_contact_name %>
+</p>
+
+<p>
+  <strong>tenant_contact_phone_number</strong>
+  <%= @premise.tenant_contact_phone_number %>
+</p>
+
+<p>
+  <strong>tenant_contact_email:</strong>
+  <%= @premise.tenant_contact_email %>
+</p>
+
+<p>
+  <strong>tenant_contact_address:</strong>
+  <%= @premise.tenant_contact_address %>
+</p>
+
+<p>
+  <strong>owner_contact_name:</strong>
+  <%= @premise.owner_contact_name %>
+</p>
+
+<p>
+  <strong>owner_contact_phone_number</strong>
+  <%= @premise.owner_contact_phone_number %>
+</p>
+
+<p>
+  <strong>owner_contact_email:</strong>
+  <%= @premise.owner_contact_email %>
+</p>
+
+<p>
+  <strong>owner_contact_address:</strong>
+  <%= @premise.owner_contact_address %>
+</p>
+
+<p>
+  <strong>unique_id_addedem:</strong>
+  <%= @premise.unique_id_addedem %>
+</p>
+
+<p>
+  <strong>unique_id_complete:</strong>
+  <%= @premise.unique_id_complete %>
+</p>
+
+<p>
+  <strong>corridor:</strong>
+  <%= @premise.corridor %>
+</p>
+
+<p>
+  <strong>lattitude:</strong>
+  <%= @premise.lattitude %>
+</p>
+
+<p>
+  <strong>longitude:</strong>
+  <%= @premise.longitude %>
+</p>
+
+<p>
+  <strong>previous_tenant:</strong>
+  <%= @premise.previous_tenant %>
+</p>
+
+<p>
+  <strong>notes:</strong>
+  <%= @premise.notes %>
+</p>
+
+<%= link_to 'Edit', edit_premise_path(@premise) %> |
+<%= link_to 'Back', premises_path %>
+premise.tenant_contact_address %>
       </p>
     </div>
     <div class="row">

@@ -122,6 +122,11 @@
         <strong>Upper fl sf:</strong>
         <%= @premise.upper_fl_sf %>
       </p>
+
+      <p>
+        <strong>Location quality:</strong>
+        <%= @premise.location_quality %>
+      </p>
     </div>
     <div class="row">
       <p>
@@ -149,6 +154,10 @@
         <%= @premise.percent_of_bldg_retail %>
       </p>
 
+       <p>
+        <strong>location_quality_grade:</strong>
+        <%= @premise.location_quality_grade %>
+      </p>
     </div>
     <div class="row">
       <p>
@@ -174,6 +183,11 @@
       <p>
         <strong>Street frontage:</strong>
         <%= @premise.street_frontage %>
+      </p>
+      
+      <p>
+        <strong>premise_quality_grade:</strong>
+        <%= @premise.premise_quality_grade %>
       </p>
     </div>
   </div>
@@ -475,21 +489,6 @@
       </p>
     </div>
   </div>
-
-  <p>
-    <strong>Location quality:</strong>
-    <%= @premise.location_quality %>
-  </p>
-
-  <p>
-    <strong>location_quality_grade:</strong>
-    <%= @premise.location_quality_grade %>
-  </p>
-
-  <p>
-    <strong>premise_quality_grade:</strong>
-    <%= @premise.premise_quality_grade %>
-  </p>
   
 </div>
 <div class="listing-options">
